@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Colors</title>
+</head>
+<style>
+    h1
+    {
+        text-align: center;
+    }
+    #randombox
+    {
+        width: 400px;
+        height: 400px;
+        margin:auto;
+        background-color:rgb(255,0,0);
+    }
+</style>
+<body>
+    <h1>Random Color Box</h1>
+    <div id="randombox"></div>
+    <script>
+
+        window.setInterval(changeColor, 10);
+
+        function changeColor()
+        {
+            let randomColorBox;
+        randomColorBox = window.document.querySelector('#randombox');
+        randomColorBox.style.backgroundColor= "rgb(255, 0 ,0)"
+
+        let red;
+        let green;
+        let blue;
+
+        red = Math.random() * 256;
+        green = Math.random() * 256;;
+        blue = Math.random() * 256;;
+
+        randomColorBox.style.backgroundColor = `rgb(${red},${green},${blue})`
+        }
+    </script>
+</body>
+</html>

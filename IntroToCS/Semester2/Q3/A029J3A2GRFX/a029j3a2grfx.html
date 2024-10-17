@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a029j3a2grfx</title>
+</head>
+<style>
+    h1{  
+}
+#water
+{
+    
+    background-image: url(Images/water.png);
+    width:100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#water #boat 
+{
+    width: 200px;
+    
+    height:200px;
+    background-color: transparent;
+    background-image: url(Images/boat.png);
+    background-size: contain;
+    position:relative;
+    left:0%;
+    transition-property: transform left;
+    transition-duration: 5s;
+    transition-timing-function:ease-out;
+}
+#water:hover #boat
+{
+    left:100%;
+    
+}
+
+#underwater
+{
+    
+    background-image: url(Images/underwater.png);
+    background-size: cover;
+    width: 500px;
+    transform:scale(.5);
+    background-attachment: fixed;
+    position: relative;
+    height: 700px;
+}
+#underwater #treasure
+{
+    height: 200px;
+    width: 200px;
+    background-image: url(Images/treasure.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    transform: scale(0.75);
+    transition-property: transform top;
+    top:100px;
+    transition-duration: 5s;
+    transition-timing-function:ease-out;
+    position: relative;
+}
+#underwater:hover #treasure
+{
+    top: 500px;
+}
+</style>
+<body>
+    <h1>A029J3A2GRFX</h1>
+    <div id="water"><div id="boat"></div></div>
+
+    <div id="underwater"><div id="treasure"></div></div>
+</body>
+</html>

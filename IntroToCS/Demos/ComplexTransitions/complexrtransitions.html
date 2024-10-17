@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Transitions</title>
+</head>
+<style>
+header, main, footer
+{
+    padding:2rem;
+    border: 2px solid silver;
+}
+a
+{
+    color: red;
+}
+header a
+{
+    color: aqua;
+}
+main a
+{
+    color: yellowgreen;
+}
+footer a
+{
+    color: chocolate;
+}
+#outerbox
+{
+    padding:3rem;
+    
+
+
+
+    
+    transform: rotate(15deg);
+}
+#outerbox #wheel 
+{
+    width: 200px;
+    height:200px;
+    background-color: transparent;
+    background-image: url(Images/tire.png);
+    background-size: cover;
+    /* transition:all 5s; */
+    position:relative;
+    left:0%;
+    transition-property: transform left;
+    transition-duration: 5s;
+    /* transition-delay: 3s; */
+    transition-timing-function:ease-out;
+}
+#outerbox:hover #wheel
+{
+    background-color: transparent;
+    transform:rotate(1440deg);
+    left:100%;
+    
+}
+
+
+</style>
+<body>
+    <h1>Complex Transitions</h1>
+    <header>
+        <a href="https://yahoo.com/">Yahoo</a>
+    </header>
+
+    <main>
+        <a href="https://google.com/">Google</a>
+    </main>
+
+    <footer>
+        <a href="https://bing.com/">Bing</a>
+    </footer>
+
+    <div id="outerbox"><div id="wheel"></div></div>
+</body>
+</html>

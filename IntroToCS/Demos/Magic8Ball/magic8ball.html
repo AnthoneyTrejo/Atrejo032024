@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball</title>
+    <style>
+        body
+        {
+            background-color: rgb(0, 0, 0);
+            animation-name:backgroundshift;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .chakra-petch-regular {
+            font-family: "Chakra Petch", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h1
+        {
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 1rem;
+            border: 4px dashed white;
+        }
+        #eight
+        {
+            text-align: center;
+            font-size: 8rem;
+        }
+        #outercircle:hover
+        {
+            box-shadow: 4px 4px 35px 10px rgb(122, 122, 126);
+        }
+        #outercircle
+        {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            margin-top: 120px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 10px 10px rgb(255, 255, 255);
+            cursor: pointer;
+            transition: 2s;
+        }
+
+        #innercircle
+        {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        
+        #messageDisplay
+        {
+            background-color: none;
+            height: 125px;
+            width: 125px;
+            position: absolute;
+            background-image: url(Images/blutriangle.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            color: white;
+            opacity: 0%; 
+            transition:all 2s;
+            text-align:center;
+            padding:1rem;
+            
+        
+
+    
+        }
+        p
+        {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .shake
+        {
+            animation-name: shake;
+            animation-duration: .5s;
+            animation-timing-function: linear;
+            animation-iteration-count:10;
+        }
+        @keyframes shake
+        {
+            0%{transform: translate(0px, 0px);}
+            25%{transform: translate(0px, -25px)rotate(200deg);}
+            50%{transform: translate(-25px, 0px)rotate(250deg);}
+            75%{transform: translate(0px,  25px)rotate(300deg);}
+            100%{transform: translate(-25px, 0px)rotate(360deg);}
+            
+        }
+        @keyframes backgroundshift
+        {
+            from
+            {
+                background-color:rgb(0, 0, 0);;
+            }
+            to
+            {
+                background-color:rgb(41, 41, 41);;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Magic 8 Ball</h1>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+                    <div id="eightball">
+                        <div id="outercircle">
+                            <div id="innercircle">
+                                <h2 id="eight"  class="chakra-petch-regular">8</h2>
+                            </div>
+                            <div id="messageDisplay"></div>
+                        </div>
+                    </div>
+                <!-- <div id="answers" class="triangle">
+
+                </div> -->
+                
+
+        <script>
+        const ball = window.document.querySelector('#outercircle');
+
+        //Create variable for ball elements
+        let innerCircle;
+        let eight;
+        let messageDisplay;
+
+        // Assign elements to variables
+        innerCircle = window.document.querySelector('#innercircle');
+        eight = window.document.querySelector('#eight');
+        messageDisplay = window.document.querySelector('#messageDisplay');
+
+        ball.addEventListener('click', shakeBall);
+        function shakeBall()
+        {
+            ball.classList.add("shake");
+            //Hide the message display
+            messageDisplay.style.opacity = "0"
+            eight.style.display = "none";
+            innerCircle.style.backgroundColor = "#333"
+            innerCircle.style.border = "4px double silver"
+            window.setTimeout(function()
+            {
+                ball.classList.remove('shake');
+            }, 5000);
+
+            // Disply the message
+            window.setTimeout(updateMessage, 5000);
+
+        
+        }
+
+        function updateMessage()
+        {
+            messageDisplay.style.opacity = '1'
+        }
+
+        let answers = [];
+        // Populate array with index values
+        answers[0] = "<p>It is certain</p>"
+        answers[1] = "<p>It is decidedly so</p>"
+        answers[2] = "<p>Without a doubt</p>"
+        answers[3] = "<p>Yes definitely</p>"
+        answers[4] = "<p>You may rely on it</p>"
+        answers[5] = "<p>As I see it, yes</p>"
+        answers[6] = "<p>Most Likely</p>"
+        answers[7] = "<p>Outlook good</p>"
+        answers[8] = "<p>Signs point to yes</p>"
+        answers[9] = "<p>Yes</p>"
+        answers[10] = "<p>Reply hazy, try again</p>"
+        answers[11] = "<p>Ask again later</p>"
+        answers[12] = "<p>Better not tell you now</p>"
+        answers[13] = "<p>Cannot predict now</p>"
+        answers[14] = "<p>Concetrate and ask again</p>"
+        answers[15] = "<p>Dont count on it</p>"
+        answers[16] = "<p>My reply is no</p>"
+        answers[17] = "<p>My sources say no</p>"
+        answers[18] = "<p>Outlook not so good</p>"
+        answers[19] = "<p>Very doubtful</p>"
+
+
+        // Generate a random number
+        let randomArrayIndex;
+        randomArrayIndex = Math.floor(Math.random() * 20) ;
+        // Assign answer to answer box
+
+        let magic8BallDiv;
+        magic8BallDiv = window.document.querySelector('#messageDisplay');
+        magic8BallDiv.style.textAlign="center"
+        magic8BallDiv.innerHTML = answers[randomArrayIndex];
+        </script>
+</body>
+</html>

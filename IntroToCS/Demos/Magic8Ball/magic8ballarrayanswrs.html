@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball Answers</title>
+</head>
+<style>
+    body
+    {
+        background-color: crimson;
+    }
+    #answers
+    {
+        height: 10rem;
+        width: 10rem;
+        border: 1px solid black;
+        margin:0 auto;
+        background-color:turquoise;
+        text-align:center;
+        padding: 1rem;
+    }
+
+</style>
+<body>
+    <h1>Magic 8 Ball Answers</h1>
+    <div id="answers">
+
+    </div>
+    <script>
+        // Create Array for magic 8 ball answers
+        let answers = [];
+        // Populate array with index values
+        answers[0] = "It is certain"
+        answers[1] = "It is decidedly so"
+        answers[2] = "Without a doubt"
+        answers[3] = "Yes definitely"
+        answers[4] = "You may rely on it"
+        answers[5] = "As I see it, yes"
+        answers[6] = "Most Likely"
+        answers[7] = "Outlook good"
+        answers[8] = "Signs point to yes"
+        answers[9] = "Yes"
+        answers[10] = "Reply hazy, try again"
+        answers[11] = "Ask again later"
+        answers[12] = "Better not tell you now"
+        answers[13] = "Cannot predict now"
+        answers[14] = "Concetrate and ask again"
+        answers[15] = "Dont count on it"
+        answers[16] = "My reply is no"
+        answers[17] = "My sources say no"
+        answers[18] = "Outlook not so good"
+        answers[19] = "Very doubtful"
+
+
+        // Generate a random number
+        let randomArrayIndex;
+        randomArrayIndex = Math.floor(Math.random() * 4) ;
+        // Assign answer to answer box
+
+        let magic8BallDiv;
+        magic8BallDiv = window.document.querySelector('#answers');
+        magic8BallDiv.style.textAlign="center"
+        magic8BallDiv.style.padding="1rem"
+        magic8BallDiv.innerHTML = answers[randomArrayIndex];
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2A</title>
+</head>
+<style>
+    div
+    {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin-top:20px;
+    }
+    div#spin
+    {
+        background-color: #6d0606;
+        animation-duration:3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: spin;
+    }
+    div#leftright
+    {
+        background-color: #06696d;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-name: leftright;
+        animation-direction:alternate;
+    }
+    div#updown
+    {
+        background-color: #066d10;
+        animation-duration:5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-name: updown;
+        animation-direction:alternate;
+        position: absolute;
+        left:50%;
+    }
+    div#rainbow
+    {
+        background-color: #696d06;
+        animation-duration:5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-name: rainbow; 
+    }
+    @keyframes spin
+    {
+        from{transform: rotate(0deg);}
+        to{transform:rotate(360deg);}
+    }
+    @keyframes leftright
+    {
+        from{transform: translate(0px);}
+        to{transform:translate(500px);}
+    }
+    @keyframes updown
+    {
+        from{transform:translate(0x) ;}
+        to{transform: translate(0px, 500px);}
+    }
+    @keyframes rainbow
+    {
+        0%{background-color: #ff0000;}
+        10%{background-color: #ff5900;}
+        20%{background-color: #1eff00;}
+        30%{background-color: #ffdd00;}
+        40%{background-color: #00ffbf;}
+        50%{background-color: #00eaff;}
+        60%{background-color: #0088ff;}
+        70%{background-color: #0055ff;}
+        80%{background-color: #ff00f2;}
+        90%{background-color: #bf276e;}
+        100%{background-color: #9b70f7;}
+    }
+</style>
+<body>
+    <h1>A029J3A2A</h1>
+    <div id="spin"></div>
+    <div id="leftright"></div>
+    <div id="updown"></div>
+    <div id="rainbow"></div>
+</body>
+</html>

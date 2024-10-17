@@ -1,0 +1,474 @@
+∫<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthoney Jose Trejo - Portfolio</title>
+    <style>
+
+        :root
+        {
+            --color-primary:rgba(0, 0, 0, .5);;
+            --color-secondary: rgba(255,7,85,.7 );
+        }
+        html
+        {
+            scroll-behavior: smooth;
+        }
+
+        body
+        {
+            background-image: url(Images/03c2f1f839ac532327ba5cab9f2a7f29.png);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            font-family: "Sevillana", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .container
+        {
+            background-color:var(--color-secondary);
+            text-shadow:2px 2px 2px black;
+            min-height: 15rem;
+            max-width: 75rem;
+            margin: auto;
+            padding: 1rem 3rem 1rem 3rem;
+            position:relative;
+            border-radius:1.5rem;
+            color: white;
+        }
+        .container1
+        {
+            background-color: var(--color-secondary);
+            min-height: 5rem;
+            max-width: 75rem;
+            margin: auto;
+            padding: 1rem 3rem 1rem 3rem;
+            position:relative;
+            border-radius:1.5rem;
+            text-shadow:2px 2px 2px black;
+            color: white;
+            
+        }
+
+        #pageheader
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+            text-align: center;
+        }
+
+        #pagenav
+        {
+            min-height: 40px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left:calc(50% - 150px);
+            bottom: 70px;
+
+            text-shadow:2px 2px 2px black;
+            font-size: 24px;
+        }
+
+        #logo
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            padding:1.5rem;
+            box-sizing:border-box;
+            position:relative;
+            top:-6px;
+                left:calc(50% - 75px);
+            background-image: url(Images/Logo.png);
+            background-position: center center;
+            border-radius:1.5rem;
+        }
+
+        #blockquote
+        {
+            min-height: 5rem;
+            max-width: 120rem;
+            background-color:var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #media
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+        }
+
+        #career
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+        }
+
+        #pagecontent
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+        }
+
+        #semesters
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+
+        }
+        .semester
+        {
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+            color: white;
+        }
+
+        #pagefooter
+        {
+            min-height: 5rem;
+            max-width: 120rem;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            text-shadow:2px 2px 2px black;
+            border-radius:1.5rem;
+            text-align: center;
+        }
+        #subfooter
+        {
+            min-height: 5rem;
+            max-width: 120rem;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            border-radius:1.5rem;
+            text-align: center;
+        }
+        iframe
+        {
+            
+            
+            background-color: var(--color-secondary);
+            color:var(--color-secondary);
+            text-shadow:2px 2px 2px black;
+            padding:1rem;
+            opacity:0.8;
+            display:block;
+            margin: 0 auto;
+            aspect-ratio: 16 /9 ;
+            width:90%;
+            border-radius:1.5rem ;
+        }
+
+        #quote
+        {
+        font-size: 24px;
+        color:white;
+        font-weight: bold;
+        text-shadow:2px 2px 2px black;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        top:-0.25rem;
+        }
+
+        #semesters
+        {
+            background-color: var(--color-primary);
+        }
+
+        #semester1
+        {
+            margin: auto;
+            margin-bottom:1.5rem ;
+        }
+        #semester2
+        {
+            margin: auto;
+            margin-bottom:1rem ;
+            display: none;
+        }
+        a{
+            color:white;
+            text-shadow:2px 2px 2px black;
+            padding:5px;
+    }
+
+    #cs
+    {
+        position: relative;
+        bottom: 0%;
+        align-content: center center;
+    }
+    p
+    {
+        font-size: 20px;
+        color:white;
+        font-weight: bold;
+        text-shadow:2px 2px 2px black;
+        margin: auto;
+        bottom: -50px;
+        text-align: center;
+    }
+
+    #top
+    {
+        width: 25px;
+        height: 25px;
+        background-color:var(--color-secondary);
+        border: 1px solid var(--color-primary);
+        padding: 1rem;
+        position:fixed;
+        text-align: center;
+        right: 20px;
+        bottom: 20px;
+        border-radius: 50%;
+        
+    }
+    button
+    {
+            background-image: url(Images/Play&Pause.png);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            box-sizing:border-box;
+            position:absolute;
+            border-radius:1.5rem;
+            background-color:var(--color-secondary);
+            border: 1px solid var(--color-primary);
+            right: 20px;
+            bottom: 100px;
+            position:fixed;
+            background-color: var(--color-secondary);
+            background-size: cover;
+            background-position: center ;
+        }
+
+        button, #top, p , #cs, .semesters, #semesters, #quote, #pagefooter, #subfooter, #pagecontent, #pagenav, #career, #pageheader, #media, #blockquote
+        {
+            max-width:1200px;
+            margin: auto;
+        }
+
+        @media screen and (min-width:1200px)
+        {
+            iframe
+            {
+                max-width: 75rem;
+            }
+            #logo
+            {
+                left: 0px;
+                transition: all 2s;
+            }
+            .container
+            {
+                min-height: 10rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- add anchor and name it to reach top -->
+    <a name="topanchor"></a>
+
+    <!-- begin page header -->
+    <header id="pageheader">
+
+        
+        <div class="container">
+            
+            <div id="logo"></div>
+            <div id="pagenav">  <a href="#career">Career</a> | <a href="#semester1">Semester1</a> | <a href="#semester2">Semester2</a> </div>
+        </div>
+    </header>
+    
+    <!-- end page header -->
+    
+    <!-- begin blockquote -->
+    <div id="blockquote">
+        <div class="container1">
+                <p id="quote">
+                    "七転び八起き" - "Fall down seven times, stand up eight"
+                </p>
+        </div>
+    </div>
+<!-- end blockquote -->
+
+    <!-- begin media -->
+    <section id="media">
+
+        <iframe src="https://www.youtube.com/embed/MzgMBrtrFc4?si=mKjTyXneNP-tvKBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </section>
+    <!-- end media -->
+    
+
+    <!-- begin career -->
+    <section id="career">
+
+
+
+    <div class="container">
+        <h2>Carrer</h2>
+        <ul>
+            <li>Letter of Introduction</li>
+            <li>Resume</li>
+            <li>Refrences</li>
+            <li>Job Application</li>
+            <li>Career Plan</li>
+            <li>Work Samples</li>
+            <li>Certificates</li>
+        </ul>
+    </div>
+
+    <a name="career"></a>
+
+    </section>
+    <!-- end career -->
+
+
+    <!-- begin pagecontent -->
+    <main id="pagecontent">
+
+        
+
+        <div class="container">
+            <h1>Introduction</h1>
+            <p id="cs"> Welcome to my webpage! My name is Anthoney Jose Trejo, I am a highschool student at Coalinga High School who is taking dual enrollment classes with West Hills College. I am also apart of the Cross Country and Track & Field team at CHS. My dreams are to go to Santa Barbara and become a biology teacher here in CHS. This portfolio here is my 3rd and final one for this pathway. This year I am in Web App Development</p>
+        </div>
+
+    </main>
+    <!-- end pagecontent -->
+
+
+    <!-- begin semesters -->
+    <section class="semesters">
+
+        <div id="semesters">
+
+            <div id="semester1">
+
+                <div class="container">
+                    <h2>Semester 1</h2>
+                    <ul>
+                        <li>A001</li>
+                        <li>A002</li>
+                        <li>A003</li>
+                        <li>A004</li>
+                    </ul>
+
+                </div>
+                <a name="semester1"></a>
+            </div>
+
+            <div id="semester2">
+
+                <div class="container">
+
+                    <h2>Semester 2</h2>
+
+                    <ul>
+                        <li>A001</li>
+                        <li>A002</li>
+                        <li>A003</li>
+                        <li>A004</li>
+                    </ul>
+
+                </div>
+                <a name="semester2"></a>
+            </div>
+        </div>
+
+    </section>
+    <!-- end semesters -->
+
+
+    <!-- begin pagefooter -->
+    <footer id="pagefooter">
+
+        
+
+        <div class="container1">
+            <a>Chagoyan</a> |
+            <a href="https://color.adobe.com/">Color Schemes</a> |
+            <a href="https://coalingahuron.aeries.net/" target="new">Aeries</a> |
+            <a href="https://chs.chusd.org/" target="new">CHS</a> |
+            <a>MyCareerTech</a> |
+            <a href="https://classroom.google.com/" target="new">Classroom</a> |
+            <a href="https://codepip.com/games/" target="new">CodePip</a> |
+            <a href="https://minga.io/" target="new">Minga</a> |
+        </div>
+
+    </footer>
+    <!-- end pagefoot
+
+    <!-begin subfooer -->
+    <div id="subfooter">
+        <div class="container1">
+            <a href="https://www.ctc.ca.gov/credentials/req-teaching">CA Gov</a> |
+            <a href="https://www.ucsb.edu/">UCSB</a> |
+            <a href="https://www.athletic.net/">Athletic</a> |
+            <a href="https://www.instagram.com/hornedtoads_xc/?hl=en">Horned Toads XC Page</a> |
+            <a href="https://www.instagram.com/chshornedtoads_trackandfield/?hl=en">Horned Toads T&F Page</a> |
+            <a href="https://westhillscollege.com/coalinga/">West Hills</a> |
+            <a href="https://westhillscollege.com/coalinga/catalog/2020-2021/programs-of-study/liberal-arts-area-of-emphasis-for-math-and-science.php">Liberal Arts (Math and Science) AA Degree</a> |
+            <a href="IntroToCS/index copy.html">Intro to Javascript Portfolio(2nd Year Pathway)</a> |
+            <a href="WebPageDesign/Trejo, Anthoney/citytheme.html">Web Page Design Portfolio(1st Year Pathway)</a> |
+            <a href=""></a> |
+        </div>
+    </div>
+    <!-- end sub footer -->
+
+    <!-- Begin Top -->
+    <div id="top"><a href="#topanchor">Top</a></div>
+    <!-- end top -->
+    <button id="ASong" onClick="playPause()">
+        <audio src="Audio/邦楽作業癒し集中睡眠三味線尺八琴夜 奏Traditional Japanese Music - Shamisen, Shakuhachi, Koto.mp3" autoplay loop>
+
+        </audio>
+        </button>
+    
+    <script>
+        var aud = document.getElementById("ASong").children[0];
+        var isPlaying = false;
+        aud.pause();
+
+        function playPause() {
+        if (isPlaying) {
+            aud.pause();
+        } else {
+            aud.play();
+        }
+        isPlaying = !isPlaying;
+        }
+    </script>
+    </body>

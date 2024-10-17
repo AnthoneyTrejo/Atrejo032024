@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            color:white;
+            transition: all 10s;
+            position:absolute;
+            
+        }
+        h1:hover
+        {
+        transform: rotate(-20deg) scale(2) translate(70px, 70px); 
+        }
+        body{background-image: url(Images/photo-1506318137071-a8e063b4bec0.avif);}
+        div#fly
+        {
+            background-image: url(Images/pngtree-tailing-asteroid-meteorite-decorative-clip-art-png-image_4197893.jpeg);
+            width: 20vh;
+            height: 20vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            transform:scale(1);
+            position: absolute;
+            top:1%;
+            right:10%;
+            transition: all 10s;
+            
+        }
+        div#fly:hover
+        {
+            transform:translate(-500px, 500px) scale(.5);
+        }
+        div#s2b
+        {
+            background-image: url(Images/download.png);
+            width: 20vh;
+            height: 20vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            transform:scale(1);
+            position: absolute;
+            transition: all 5s;
+            top:300px;
+            left:42%;
+            margin: auto;
+
+        }
+        div#s2b:hover
+        {
+            transform: scale(2.5);
+        }
+        div#stretch
+        {
+            background-image: url(Images/black-hole-disk.png);
+            width: 30vh;
+            height: 20vh;
+            background-attachment: fixed;
+            background-size: cover;
+            margin:auto;
+            background-position: center ;
+            transform:scale(1);
+            position: absolute;
+            transition: all 2s;
+            top:500px;
+            left: 20%;
+        }
+        div#stretch:hover
+        {
+            transform:skew(250deg, 50deg);
+        }
+        div#spin
+        {
+            background-image: url(Images/Firefly-space-vortex-logo-75665.png);
+            width: 30vh;
+            height: 30vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            transform:scale(1);
+            position: absolute;
+            top:500px;
+            left: 70%;
+            transition: all 2s;
+        }
+        div#spin:hover
+        {
+            rotate:360deg;
+            transform: scale(.01);
+        }
+    </style>
+</head>
+<body>
+    <h1>A029G8</h1>
+    <div id="fly"></div>
+    <div id="s2b"></div>
+    <div id="stretch"></div>
+    <div id="spin"></div>
+</body>
+</html>
