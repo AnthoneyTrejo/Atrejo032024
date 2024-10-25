@@ -26,16 +26,26 @@
 |  fuiste| fuisteis | 
 |   fue | fueron
 
-|  Ser| Ir     
-| :---: | :---: | 
-| fui | fuimos |  
-|  fuiste| fuisteis | 
-|   fue | fueron
 
-|  Ser| Ir     
+*Dar*
+|  |     |
 | :---: | :---: | 
-| fui | fuimos |  
-|  fuiste| fuisteis | 
-|   fue | fueron
+| di | dimos |  
+|  diste| disteis | 
+|   dio | dieron
+
+*Ver*
+|  |     |
+| :---: | :---: | 
+| vi | vimos |  
+|  viste| visteis | 
+|   vio | vieron
+
+*Endings*
+|  |     |
+| :---: | :---: | 
+| e | imos |  
+|  iste| isteis | 
+|   o | ieron/jeron
 
 
