@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing 1</title>
+    <style>
+#canvas
+    {
+        border: 2px solid seagreen;
+        margin:auto;
+        display: block;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = window.document.querySelector('#canvas')
+        
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = 500;
+        canvas.height = 500;
+        canvas.style.backgroundColor = 'lightblue'
+
+        ctx.fillStyle = "brown"
+            
+            ctx.beginPath();
+            ctx.moveTo(300,300)
+            ctx.lineTo(400,400)
+            ctx.rect(0, 200, 500, 180);
+            ctx.fill();
+        
+            ctx.strokeStyle ='black';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(230, 310, 75, 2, 3, true);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath()
+
+        ctx.strokeStyle ='black';
+        ctx.fillStyle = 'darkorange';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(210, 300, 75, 0, 3, false);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle ='black';
+        ctx.fillStyle = 'darkorange';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(210, 300, 75, 3, 6.28, false);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle ='black';
+        ctx.fillStyle = 'green';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(250, 290, 75, 4, 5, false);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'blue';
+        ctx.beginPath();
+        ctx.moveTo(150,150)
+        ctx.lineTo(350, 150)
+        ctx.lineTo(350, 25)
+        ctx.lineTo(150, 25);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.strokeStyle = 'Black'
+        ctx.beginPath();
+        ctx.moveTo(250,150)
+        ctx.lineTo(250, 25)
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.strokeStyle = 'Black'
+        ctx.beginPath();
+        ctx.moveTo(150,88);
+        ctx.lineTo(350, 88);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.strokeStyle ='orange';
+        ctx.fillStyle = 'yellow';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(170, 50, 15, 0, 6.28, false);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+
+
+        
+
+        
+
+        
+
+        
+
+
+
+            
+    </script>
+</body>
+</html>
