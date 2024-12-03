@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting App v1</title>
+    <style>
+        *
+        {
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        #canvas
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            
+            
+        }
+        #menu
+        {
+            background-color: silver;
+            border: 2px solid #333;
+            height: 60px;
+            position: fixed;
+            bottom: 0;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        img
+        {
+            width: 25px;
+            height: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+    <canvas id="canvas">
+
+    </canvas>
+    <section id="menu">
+        <input type="color" id="colorpicker" value="#2e8b57">
+        <input type="range" id="rangepicker" min="1" max="420" value="69">
+        <div id="eraser"><img src="Images/eraser.png" alt="Eraser - Erase Your Drawing"></div>
+        <div id="clear"><img src="Images/bin.png" alt="TrashCan - Clear Your Canvas"></div>
+        <div id="undo"> <img src="Images/undo.png" alt="Undo - Undo Last Action"></div>
+    </section>
+
+    <script>
+        // Create JavaScript Variables
+        let canvasColor = "#ffffff"; // To be used on eraseer
+        let brushColor = "#2e8b57"; // Default Brush color
+        let painting = false; 
+        let brushSize = 69;
+
+
+        // Create Canvas Variables
+        const CANVAS = window.document.querySelector('#canvas');
+        const CTX = CANVAS.getContext('2d');
+
+        // Create Menu Variables
+        const COLORPICKER = window.document.querySelector('#colorpicker');
+        const RANGEPICKER = window.document.querySelector('#rangepicker');
+        const ERASER = window.document.querySelector('#eraser');
+        const CLEAR = window.document.querySelector('#clear');
+        const UNDO = window.document.querySelector('#undo');
+        
+
+        // Set canvas style
+        CANVAS.style.backgroundColor = canvasColor;
+        CANVAS.width = window.innerWidth;
+        CANVAS.height = window.innerHeight
+        
+    </script>
+</body>
+</html>
