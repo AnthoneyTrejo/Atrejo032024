@@ -28,12 +28,17 @@
             bottom: 0;
             padding: 1rem;
             width: 100%;
+            display: flex;
+        }
+        div
+        {
+            padding-right:20px;
         }
 
         img
         {
-            width: 25px;
-            height: 25px;
+            width: 35px;
+            height: 35px;
         }
         
     </style>
@@ -74,7 +79,13 @@
         CANVAS.style.backgroundColor = canvasColor;
         CANVAS.width = window.innerWidth;
         CANVAS.height = window.innerHeight
-        
+
+        // Add Event Listeners
+        COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
+        RANGEPICKER.addEventListener('click', function(){alert('Rangepicker!')});
+        ERASER.addEventListener('click', function(){alert('Eraser!')});
+        CLEAR.addEventListener('click', function(){alert('Clear!')});
+        UNDO.addEventListener('click', function(){alert('Undo!')});
     </script>
 </body>
 </html>
