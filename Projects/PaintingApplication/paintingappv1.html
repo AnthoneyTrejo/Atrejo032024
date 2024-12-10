@@ -78,7 +78,7 @@
         // Set canvas style
         CANVAS.style.backgroundColor = canvasColor;
         CANVAS.width = window.innerWidth;
-        CANVAS.height = window.innerHeight
+        CANVAS.height = window.innerHeight;
 
         // Add Event Listeners
         COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
@@ -86,6 +86,54 @@
         ERASER.addEventListener('click', function(){alert('Eraser!')});
         CLEAR.addEventListener('click', function(){alert('Clear!')});
         UNDO.addEventListener('click', function(){alert('Undo!')});
+
+        // Create Object to track x and y coordinates
+        const MOUSE = 
+        {
+            x:undefined,
+            y:undefined,
+        };
+
+        //Create Drawing Events (mousedown, mousemove, mouse up)
+        CANVAS.addEventListener('mousedown', function(e)
+        {
+            painting = true;
+
+            // Capture X and Y coordinates
+            MOUSE.x = e.x;
+            MOUSE.y = e.y;
+
+            // Start Painting
+            CTX.beginPath();
+            CTX.moveTo(MOUSE.x, MOUSE.y);
+
+
+            });
+
+        CANVAS.addEventListener('mousemove', function(e)
+        {
+            // console.log(MOUSE.x + " " + MOUSE.y)
+            MOUSE.x = e.x;
+            MOUSE.y = e.y;
+
+            draw();
+        })
+
+        CANVAS.addEventListener('mouseup', function()
+        {
+            painting = false
+        });
+        
+        function draw()
+        {
+            if(painting == true)
+            {
+                CTX.lineTo(MOUSE.x, MOUSE.y);
+                CTX.stroke();
+
+            }
+        };
+
     </script>
 </body>
 </html>
