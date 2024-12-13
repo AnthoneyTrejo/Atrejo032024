@@ -60,7 +60,12 @@
         let canvasColor = "#ffffff"; // To be used on eraseer
         let brushColor = "#2e8b57"; // Default Brush color
         let painting = false; 
-        let brushSize = 69;
+        let brushSize = 15;
+
+        // Canvas Drawing Variable
+        let lineJoinStyle = "round";
+        let lineCapStyle = "round";
+
 
 
         // Create Canvas Variables
@@ -81,11 +86,32 @@
         CANVAS.height = window.innerHeight;
 
         // Add Event Listeners
-        COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
-        RANGEPICKER.addEventListener('click', function(){alert('Rangepicker!')});
-        ERASER.addEventListener('click', function(){alert('Eraser!')});
-        CLEAR.addEventListener('click', function(){alert('Clear!')});
+        COLORPICKER.addEventListener('input', function(e)
+        {
+            brushColor = e.target.value;
+        });
+
+        RANGEPICKER.addEventListener('input', function(e)
+        {
+            brushSize = e.target.value;
+        });
+
+        ERASER.addEventListener('click', function()
+        {
+            brushColor = canvasColor;
+        });
+
+        CLEAR.addEventListener('click', function()
+        {
+            CTX.fillStyle = canvasColor;
+            
+            CTX.beginPath();
+            CTX.rect(0, 0, 1200, 1200);
+            CTX.fill();
+        });
+
         UNDO.addEventListener('click', function(){alert('Undo!')});
+
 
         // Create Object to track x and y coordinates
         const MOUSE = 
@@ -128,6 +154,10 @@
         {
             if(painting == true)
             {
+                CTX.strokeStyle = brushColor;
+                CTX.lineWidth = brushSize;
+                CTX.lineJoin = lineJoinStyle;
+                CTX.lineCap = lineCapStyle;
                 CTX.lineTo(MOUSE.x, MOUSE.y);
                 CTX.stroke();
 
