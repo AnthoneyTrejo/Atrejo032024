@@ -21,7 +21,7 @@
         }
         #menu
         {
-            background-color: silver;
+            background-color: #1d573c;
             border: 2px solid #333;
             height: 60px;
             position: fixed;
@@ -50,9 +50,9 @@
     <section id="menu">
         <input type="color" id="colorpicker" value="#2e8b57">
         <input type="range" id="rangepicker" min="1" max="420" value="69">
-        <div id="eraser"><img src="Images/eraser.png" alt="Eraser - Erase Your Drawing"></div>
-        <div id="clear"><img src="Images/bin.png" alt="TrashCan - Clear Your Canvas"></div>
-        <div id="undo"> <img src="Images/undo.png" alt="Undo - Undo Last Action"></div>
+        <div id="eraser"><img src="Images/eraser.svg" alt="Eraser - Erase Your Drawing"></div>
+        <div id="clear"><img src="Images/clear.svg" alt="TrashCan - Clear Your Canvas"></div>
+        <div id="undo"> <img src="Images/undo.svg" alt="Undo - Undo Last Action"></div>
         <div id="download"> <img src="Images/download.svg" alt="Download - Download Canvas Imgage"></div>
     </section>
 
@@ -62,6 +62,7 @@
         let brushColor = "#2e8b57"; // Default Brush color
         let painting = false; 
         let brushSize = 15;
+        let canvasData;
 
         // Canvas Drawing Variable
         let lineJoinStyle = "round";
@@ -173,8 +174,23 @@
 
         CANVAS.addEventListener('mouseup', function()
         {
-            painting = false
+            painting = false;
+            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+            // alert(canvasData);
+        
         });
+
+        window.addEventListener('resize', function()
+        {
+            // alert('We Resized The Window DUMBASS!');
+            CANVAS.width = window.innerWidth;
+            CANVAS.height = window.innerHeight;
+            // CANVAS.height = window.innerHeight-20;
+            // Place canvas data on canvas
+            CTX.putImageData(canvasData, 0,0);
+        });
+
+    
         
         function draw()
         {
