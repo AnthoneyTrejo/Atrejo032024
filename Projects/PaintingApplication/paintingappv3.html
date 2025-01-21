@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painting App v2</title>
+    <title>Painting App v3</title>
     <style>
         *
         {
@@ -63,6 +63,12 @@
         let painting = false; 
         let brushSize = 15;
         let canvasData;
+
+        // Create Undo variables
+        let undoArray = []; // to hold snapshots of drawing data
+        let undoIndex = -1; // to track the current index of the undoArray
+
+
 
         // Canvas Drawing Variable
         let lineJoinStyle = "round";
@@ -165,20 +171,47 @@
 
         CANVAS.addEventListener('mousemove', function(e)
         {
-            // console.log(MOUSE.x + " " + MOUSE.y)
             MOUSE.x = e.x;
             MOUSE.y = e.y;
 
             draw();
         })
 
-        CANVAS.addEventListener('mouseup', function()
+        CANVAS.addEventListener('mouseup', function(e)
         {
             painting = false;
+            // Prevent defaul   t behavior
+            e.preventDefault(); // Prevent default behavior
+
+            captureImageData(e);
+
             canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
-            // alert(canvasData);
+            // alert(canvasData);;
+
+            // prevent unwanted behavior
+            CTX.beginPath();
+
+
         
         });
+
+        function captureImageData(e)
+        {
+            if(e.type == "mouseup")
+            {
+                // Assign data to variable to hold the image down
+                canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+
+                //capture the data
+                undoArray.push(canvasData);
+                console.log(undoArray);
+
+
+                undoIndex = undoIndex+1; // Updaate array index
+                console.log(undoIndex);
+
+            }
+        }
 
         window.addEventListener('resize', function()
         {
@@ -187,7 +220,7 @@
             CANVAS.height = window.innerHeight;
             // CANVAS.height = window.innerHeight-20;
             // Place canvas data on canvas
-            CTX.putImageData(canvasData, 0,0);
+            // CTX.putImageData(canvasData, 0,0);
         });
 
     
