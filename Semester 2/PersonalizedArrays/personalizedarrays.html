@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tester Online Demo</title>
+    <title>My Favorite Cars</title>
 </head>
 <body>
+    <h1>
+        My Favorite Cars
+    </h1>
     
 
     <script>
@@ -27,10 +30,11 @@
         myCars.shift();
         myCars.unshift("1998 Mitsubishi Eclipse");
 
+        console.log(myCars.length);
 
-        myCars.forEach(function(cars)
+        myCars.forEach(function(cars, index)
         {
-            console.log("My dream car is " + cars);
+            console.log("My dream car is " + cars + index);
         });
 
     </script>
