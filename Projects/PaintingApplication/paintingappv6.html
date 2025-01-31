@@ -212,10 +212,8 @@
 
         });
 
-        window.document.body.addEventListener('touchmove', function(e)
-        {
-            e.preventDefault();
-        }, {passive:false});
+        window.document.body.addEventListener('touchstart', function(e)
+        { e.preventDefault();}, {passive:false});
 
         CANVAS.addEventListener('touchstart', function(e)
         {
