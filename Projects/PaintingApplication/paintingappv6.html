@@ -197,7 +197,7 @@
             MOUSE.y = e.y;
 
             draw();
-        })
+        });
 
         CANVAS.addEventListener('mouseup', function(e)
         {
@@ -269,7 +269,7 @@
                 // console.log(undoIndex);
 
             }
-        }
+        };
 
         window.addEventListener('resize', function()
         {
@@ -311,7 +311,7 @@
                 undoArray.pop(); // delete last itwem in array (snapshot)
                 CTX.putImageData(undoArray[undoIndex], 0,0);
             }
-        }
+        };
 
         function clearCanvas()
         {
@@ -322,7 +322,7 @@
             // Reset undo variables
             undoArray = []; // to capture snapshots of drawing data
             undoIndex = -1; // to track undo array index value
-        }
+        };
 
     </script>
 </body>
