@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Mobile First Design*/
+        body
+        {
+            background-color: seagreen;
+            padding:1rem;
+        }
+        #container
+        {
+            max-width: 1200px;
+            background-color: pink;
+            margin: auto;
+            border: 1px solid black;
+
+        }
+        #header
+        {
+            background-color: lime;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: hr;
+        }
+        #nav
+        {
+            background-color: lavender;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: nv;
+        }
+        #media
+        {
+            background-color: pink;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: md;
+        }
+        main
+        {
+            background-color: white;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: mn;
+        }
+        aside
+        {
+            background-color:salmon;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: ad;
+        }
+        footer
+        {
+            background-color:orange;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: fr;
+        }
+        #subfooter
+        {
+            background-color: lightblue;
+            min-height: 5rem;
+            padding:1rem;
+            margin: auto;
+            grid-area: sr;
+        }
+
+        /* Desktop and Tab;et*/
+        /* Media Queries*/
+        @media screen and (min-width: 480px)
+        {
+            body
+            {
+                background-color: blue;
+            }
+            #container
+            {
+                display: grid;
+                background-color:silver;
+                grid-template-areas:
+                "hr hr hr hr"
+                "nv nv nv nv"
+                "mn mn mn mn"
+                "md md md md"
+                "ad ad ad ad"
+                "sr sr fr fr"
+                "sr sr fr fr";
+            }
+            #header
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+            }
+
+            #nav
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 2rem;
+            }
+            main
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 6rem;           
+            }
+            #media
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 12rem;           
+            }
+            aside
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;           
+            }
+            footer
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+            }
+            #subfooter
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;     
+            }
+
+            
+            
+            
+
+
+        }
+        @media screen and (min-width: 768px)
+        {
+            body
+            {
+                background-color: crimson;
+            }
+
+            #container
+            {
+                display: grid;
+                background-color:silver;
+                grid-template-areas:
+                
+                "hr hr hr hr"
+                "nv nv nv nv"
+                "mn mn mn mn"
+                "md md md md"
+                "fr fr fr ad"
+                "sr sr sr ad";
+            }
+
+
+            #header
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+            }
+
+            #nav
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 2rem;
+            }
+            main
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 6rem;           
+            }
+            #media
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                min-height: 12rem;           
+            }
+            aside
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;           
+            }
+            footer
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+            }
+            #subfooter
+            {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;     
+            }
+        }
+        @media screen and (min-width: 1200px)
+        {
+            body
+            {
+                background-color: grey;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<div id="nav">Nav</div>
+<div id="header">Header</div>
+<div id="media">Media</div>
+<main>Main</main>
+<aside>Links</aside>
+<footer>Footer</footer>
+<footer id="subfooter">SubFooter</footer>
+</div>
+</body>
+</html>
