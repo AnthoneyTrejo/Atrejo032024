@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO1 Grid</title>
+</head>
+<body>
+    <style>
+        #container
+        {
+            margin:auto;
+            padding: 1rem;
+            background-color: purple;
+            max-width: 1200px;
+            border-radius: 2rem 2rem 2rem 2rem;
+        }
+        #wrapper
+        {
+            width: 80%;
+            margin: auto;
+            padding: 1rem;
+            background-color: cyan;
+            border-radius: 1rem 1rem 1rem 1rem;
+
+        }
+        #pageheader
+        {
+            min-height: 5rem;
+            background-color: orange;
+            margin: auto;
+            padding: 1rem;
+            grid-area: ph;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #mainnav
+        {
+            min-height: 5rem;
+            background-color: seagreen;
+            margin: auto;
+            padding: 1rem;
+            grid-area: mn;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #intromedia
+        {
+            min-height: 5rem;
+            background-color: lime;
+            margin: auto;
+            padding: 1rem;
+            grid-area: im;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #pagemain
+        {
+            min-height: 5rem;
+            background-color: white;
+            margin: auto;
+            padding: 1rem;
+            grid-area: pm;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #pageaside
+        {
+            min-height: 5rem;
+            background-color: teal;
+            margin: auto;
+            padding: 1rem;
+            grid-area: pa;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #card001{min-height: 5rem;
+            background-color: coral;
+            margin: auto;
+            padding: 1rem;
+            grid-area: c1;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #card002
+        {
+            min-height: 5rem;
+            background-color: lightblue;
+            margin: auto;
+            padding: 1rem;
+            grid-area: c2;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #card003
+        {
+            min-height: 5rem;
+            background-color: lightgreen;
+            margin: auto;
+            padding: 1rem;
+            grid-area: c3;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #card004
+        {
+            min-height: 5rem;
+            background-color:yellow;
+            margin: auto;
+            padding: 1rem;
+            grid-area: c4;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #pagefooter
+        {
+            min-height: 5rem;
+            background-color: gold;
+            margin: auto;
+            padding: 1rem;
+            grid-area: pf;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #pagedetails
+        {
+            min-height: 5rem;
+            background-color: silver;
+            margin: auto;
+            padding: 1rem;
+            grid-area: pd;
+            border-radius: 1rem 1rem 1rem 1rem;
+        }
+        
+        @media screen and (min-width: 768px)
+        {
+            #wrapper
+            {
+                min-width: 80%;
+                display: grid;
+                grid-template-areas: 
+                "ph ph ph ph"
+                "mn mn mn mn"
+                "im im pa pa"
+                "pm pm pa pa"
+                "c1 c1 c2 c2"
+                "c3 c3 c4 c4" 
+                "pf pf pf pf"
+                "pd pd pd pd"
+                ;
+
+            }
+            #pageheader
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #mainnav
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #intromedia
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #pagemain
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #pageaside
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #card001{
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+            }
+        #card002
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #card003
+        {
+           
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #card004
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #pagefooter
+        {
+            
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        #pagedetails
+        {
+            margin: 0.5rem;
+                padding: 0.5rem;
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        }
+        
+    </style>
+
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader"></header>
+            <nav id="mainnav"></nav>
+            <div id="intromedia"></div>
+            <main id="pagemain"></main>
+            <aside id="pageaside"></aside>
+            <div id="card001"></div>
+            <div id="card002"></div>
+            <div id="card003"></div>
+            <div id="card004"></div>
+            <footer id="pagefooter"></footer>
+            <footer id="pagedetails"></footer>
+        </div>
+    </div>
+</body>
+</html>
