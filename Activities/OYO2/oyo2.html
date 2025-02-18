@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO2 </title>
+</head>
+<style>
+    #container
+    {
+            padding: 1rem;
+            background-color: purple;
+            max-width: 1200px;
+            width: 80%;
+    }
+    #wrapper
+    {
+            width: 80%;
+            margin: auto;
+            gap: 10px; 
+    }
+    #pageheader
+    {
+        min-height: 5rem;
+        background-color: orange;
+
+        grid-area: ph;
+
+    }
+    #mainnav
+    {
+        min-height: 7rem;
+        background-color: seagreen;
+
+        grid-area: mn;
+
+    }
+    #intromedia
+    {
+        min-height: 5rem;
+        background-color: lime;
+
+        grid-area: im;
+  
+    }
+    #pagemain
+    {
+        min-height: 5rem;
+        background-color: white;
+
+        grid-area: pm;
+
+    }
+    #card001{min-height: 5rem;
+        background-color: coral;
+        
+        grid-area: c1;
+        
+    }
+    #card002
+    {
+        min-height: 5rem;
+        background-color: lightblue;
+        
+        grid-area: c2;
+        
+    }
+    #pagefooter
+    {
+        min-height: 5rem;
+        background-color: gold;
+        
+        grid-area: pf;
+        
+    }
+    #pagedetails
+    {
+        min-height: 5rem;
+        background-color: silver;
+        
+        grid-area: pd;
+        
+    }
+
+    
+    @media screen and (min-width: 768px)
+    {
+        #wrapper
+        {
+            display: grid;
+            grid-template-areas:
+            "ph ph ph"
+            "im im im"
+            "mn pm pm"
+            "mn pm pm"
+            "mn c1 c2"
+            "pf pf pf"
+            "pd pd pd"
+            "pd pd pd";
+        }
+        #pageheader
+        {
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #mainnav
+        {
+            
+                
+                border: 1px solid black;
+                text-align: center;
+                min-height: 20rem;
+        }
+        #intromedia
+        {
+            
+                
+                border: 1px solid black;
+                text-align: center;
+                min-height: 14rem;
+        }
+        #pagemain
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 15rem;
+        }
+        #card001{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card002
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #pagefooter
+        {
+            
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #pagedetails
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        }
+</style>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">
+                #Pageheader
+            </header>
+            <nav id="mainnav">
+                #Main Nav
+            </nav>
+            <div id="intromedia">
+                #Intro Media
+            </div>
+            <main id="pagemain">
+                #Pagemain
+            </main>
+            <div id="card001">
+                #Card001
+            </div>
+            <div id="card002">
+                #Card002
+            </div>
+            <footer id="pagefooter">
+                #Pagefooter
+            </footer>
+            <footer id="pagedetails">
+                #Pagedetails
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
