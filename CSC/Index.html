@@ -15,6 +15,7 @@
     {
        background-color:rgb(22, 53, 32);
        color: white;
+       background-image: linear-gradient(to bottom, seagreen 10%, rgb(34, 101, 63) 20%);
     }
     #container
     {
@@ -23,7 +24,7 @@
             max-width: 1200px;
             width: 80%;
             margin: auto;
-            
+            padding-top: 5rem;
     }
     #wrapper
     {
@@ -39,11 +40,11 @@
             padding:1.5rem;
             box-sizing:border-box;
             position:relative;
-            top:-6px;
+            top:140px;
                 left:calc(50% - 75px);
             background-image: url(Images/logo2.png);
             background-position: center center;
-            border-radius:1.5rem;
+            
         }
     #pageheader
     {
@@ -98,7 +99,6 @@
     }
     .cards{background-color: var(--color-secondary);
     min-height: 150px;
-    padding: 1rem;
     padding-top:0 ;
     overflow: hidden;
     border: 1px solid black;
@@ -108,10 +108,11 @@
     margin-bottom:1rem;
     color: white;}
 
-    h2
+    .cards h2
     {
         margin-top:0;
-        width: 100%;
+        background-color: var(--color-secondary);
+        opacity:0.8;
     }
     #card002
     {
@@ -226,13 +227,13 @@
     {
         color: white;
     }
-    h1, h2, p
+    h1, p
     {
         background-color: var(--color-secondary);
         border-radius:1rem 1rem 1rem 1rem;
         opacity: 0.8;
         padding: 1rem;
-    padding-top:0 ;
+        padding-top:0 ;
     }
     li
     {
@@ -383,8 +384,8 @@
         }
 </style>
 <body>
+    <div id="logo"></div>
     <div id="container">
-        <div id="logo"></div>
         <div id="wrapper">
             <header id="pageheader">
                 
@@ -407,7 +408,7 @@
                 <div id="card001" class="cards"><h2>Dogs</h2></div>
                 <div id="card002"class="cards"><h2>Cats</h2></div>
                 <div id="card003"class="cards"><h2>Fish</h2></div>
-                <div id="card004"class="cards"><h2>Frogs</></div>
+                <div id="card004"class="cards"><h2>Frogs></div>
                 <div id="card005"class="cards"><h2>Birds</h2></div>
                 <div id="card006"class="cards"><h2>Rodents</h2></div>
                 <div id="card007"class="cards"><h2>Snakes</h2></div>
@@ -420,7 +421,7 @@
             <footer id="pagedetails">
                 <h2>Information</h2>
                 <ul>
-                   
+                
                     <p>4355 South Jameson St CA 3453</p>
                     <p>(559)673-3466</p>
                     <p>bestfriendadoption@gmail.com</p>
