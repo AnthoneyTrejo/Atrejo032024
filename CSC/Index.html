@@ -23,7 +23,7 @@
             max-width: 1200px;
             width: 80%;
             margin: auto;
-            border-radius:1.5rem;
+            
     }
     #wrapper
     {
@@ -47,9 +47,9 @@
         }
     #pageheader
     {
-        min-height: 5rem;
+        min-height: 10rem;
         background-color: var(--color-secondary);
-        border-radius:1.5rem;
+        padding: 1rem;
         grid-area: ph;
         background-image: url(Images/cat+dog/large/cat-dog.jpg);
         background-position: center center;
@@ -61,20 +61,19 @@
     {
         min-height: 7rem;
         background-color: var(--color-secondary);
-        border-radius:1.5rem;
+        padding: 1rem;
         grid-area: mn;
-        border-radius:1.5rem;
-        background-image: url(Images/Backgrounds/6.webp);
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
 
+    }
+    #mainnav ul
+    {
+        padding: 0;
     }
     #intromedia
     {
         min-height: 5rem;
         background-color: var(--color-secondary);
-        border-radius:1.5rem;
+        padding: 1rem;
         grid-area: im;
   
     }
@@ -83,7 +82,7 @@
         min-height: 5rem;
         background-color: var(--color-secondary);
         grid-area: pm;
-        border-radius:1.5rem;
+        padding: 1rem;
         background-image: url(Images/Backgrounds/Firefly\ a\ beautiful\ green\ forest\ that\ leads\ to\ a\ sunset\ 77433.jpg);
         background-position: center center;
         background-size: cover;
@@ -100,12 +99,20 @@
     .cards{background-color: var(--color-secondary);
     min-height: 150px;
     padding: 1rem;
+    padding-top:0 ;
+    overflow: hidden;
     border: 1px solid black;
     border-radius: 25px;
     width: 80%;
     margin: auto;
     margin-bottom:1rem;
     color: white;}
+
+    h2
+    {
+        margin-top:0;
+        width: 100%;
+    }
     #card002
     {
         min-height: 5rem;
@@ -161,9 +168,10 @@
         
     }
     #card007
-    {min-height: 5rem;
+    {
+        min-height: 5rem;
         background-color: var(--color-secondary);
-        background-image: url(Images/rabbits/medium/rabbits.jpg);
+        background-image: url(Images/snakes/large/king-cobra-gf7451f30d_1280.jpg);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -174,7 +182,7 @@
     {
         min-height: 5rem;
         background-color: var(--color-secondary);
-        background-image: url(Images/snakes/large/king-cobra-gf7451f30d_1280.jpg);
+        background-image: url(Images/spiders/medium/spider-g6a02179ae_1920.jpg);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -185,29 +193,18 @@
     {
         min-height: 5rem;
         background-color: var(--color-secondary);
-        background-image: url(Images/spiders/medium/spider-g6a02179ae_1920.jpg);
+        background-image: url(Images/turtles/medium/turtle-sweater.jpg);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         grid-area: c9;
         
     }
-    #card010
-    {
-        min-height: 5rem;
-        background-color: var(--color-secondary);
-        background-image: url(Images/turtles/medium/turtle-sweater.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        grid-area: c10;
-        
-    }
     #pagefooter
     {
         min-height: 5rem;
         background-color: var(--color-secondary);
-        border-radius:1.5rem;
+        padding: 1rem;
         grid-area: pf;
         background-image: url(Images/Backgrounds/Firefly\ background\ image\ of\ a\ green\ field\ and\ paw\ prints\ 83459.jpg);
         background-position: center center;
@@ -218,7 +215,7 @@
     {
         min-height: 5rem;
         background-color: var(--color-secondary);
-        border-radius:1.5rem;
+        padding: 1rem;
         grid-area: pd;
         background-image: url(Images/Backgrounds/Firefly\ a\ full\ image\ of\ just\ grass\ 83459.jpg);
         background-position: center center;
@@ -227,9 +224,20 @@
     }
     a
     {
-        color: red;
+        color: white;
     }
-
+    h1, h2, p
+    {
+        background-color: var(--color-secondary);
+        border-radius:1rem 1rem 1rem 1rem;
+        opacity: 0.8;
+        padding: 1rem;
+    padding-top:0 ;
+    }
+    li
+    {
+        list-style-type:none;
+    }
     
     @media screen and (min-width: 768px)
     {
@@ -242,10 +250,9 @@
             "im im im"
             "mn pm pm"
             "mn pm pm"
-            "c1 pm pm"
-            "c2 c3 c4"
-            "c5 c6 c7"
-            "c8 c9 c10"
+            "c1 c2 c3"
+            "c4 c5 c6"
+            "c7 c8 c9"
             "pf pf pf"
             "pd pd pd"
             "pd pd pd";
@@ -254,15 +261,15 @@
         {
                 border: 1px solid black;
                 text-align: center;
-                min-height: 10rem;
+                min-height: 20rem;
         }
         #mainnav
         {
             
                 
                 border: 1px solid black;
-                text-align: center;
-                min-height: 20rem;
+                min-height: 15rem;
+                line-height: 1.5;
         }
         #intromedia
         {
@@ -357,13 +364,6 @@
                 text-align: center;
                 min-height: 10rem;
         }
-        #card010
-        {
-            
-                border: 1px solid black;
-                text-align: center;
-                min-height: 10rem;
-        }
         
         #pagefooter
         {
@@ -387,59 +387,44 @@
         <div id="logo"></div>
         <div id="wrapper">
             <header id="pageheader">
-                #Pageheader
+                
             </header>
             <nav id="mainnav">
-                <h2>Best Foods for Pets</h2>
                 <ul>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj7iJW59dyLAxWgO0QIHbiqE6YQFnoECBoQAw&url=https%3A%2F%2Fwww.carecredit.com%2Fwell-u%2Fpet-care%2Fhealthy-food-for-dogs%2F&usg=AOvVaw06bm5Yehe1aK1dn0XAQXNC&opi=89978449">Dogs</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjdspW_9dyLAxWILkQIHUhSIs4QFnoECDIQAQ&url=https%3A%2F%2Fwww.petmd.com%2Fcat%2Fvet-verified%2Fbest-cat-food&usg=AOvVaw0wxUXPlvT96rK20TcPnaSQ&opi=89978449">Cats</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiX8vvS9dyLAxXOLkQIHTsiFoMQFnoECBIQAw&url=https%3A%2F%2Fwww.rspca.org.uk%2Fadviceandwelfare%2Fpets%2Ffish%2Fdiet%23%3A~%3Atext%3DGoldfish%2520love%2520chopped%2520vegetables%2520such%2Cwood%2520that%2520they%2520graze%2520on.&usg=AOvVaw2jvFpCs8MpAAgKmllfHwbC&opi=89978449">Fish</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjQ6-7g9dyLAxXhLkQIHdzLCZ4QFnoECC4QAQ&url=https%3A%2F%2Fwww.bbevs.com.au%2Fsites%2Fsite-7755%2Fdocuments%2FAmphibians%2FWhat-Should-I-Feed-My-Frog.pdf&usg=AOvVaw1t2-p40FkP_tVlRXoTuldp&opi=89978449">Frogs</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi3huPl9dyLAxW8OUQIHUDhMFIQFnoECBYQAw&url=https%3A%2F%2Fvcahospitals.com%2Fknow-your-pet%2Ffruits-and-vegetables-in-bird-diets%23%3A~%3Atext%3DBright%2520yellow%252C%2520red%252C%2520and%2520orange%2Cnutrient%2520in%2520a%2520birds%27%2520diet.&usg=AOvVaw1E2hc9exWXx5DTGBwZZKG2&opi=89978449">Birds</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiL_8Tr9dyLAxWlEEQIHTqfK5kQFnoECBAQAQ&url=https%3A%2F%2Fsupremepetfoods.us%2Fblog%2Fgood-food-for-rats%2F&usg=AOvVaw2zTAYH9WkntOtopySbaay_&opi=89978449">Rodents</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiF95Tx9dyLAxUol-4BHTevMlYQFnoECBAQAw&url=https%3A%2F%2Fwww.rspca.org.uk%2Fadviceandwelfare%2Fpets%2Frabbits%2Fdiet%23%3A~%3Atext%3DMost%2520of%2520their%2520diet%2520should%2Cto%2520drink%2520at%2520all%2520times.&usg=AOvVaw1EyQLgbCO9OHaPbYeKLHzL&opi=89978449">Rabbits</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiC-qPD9dyLAxVyN0QIHZJjM2YQFnoECBwQAw&url=https%3A%2F%2Fwww.petmd.com%2Freptile%2Fnutrition%2Fwhat-do-pet-snakes-eat%23%3A~%3Atext%3DThe%2520best%2520way%2520to%2520maintain%2Cfrequently%2520as%2520twice%2520a%2520week.&usg=AOvVaw0Z7x6QQZ4w2YIyVrZT_6tf&cshid=1740421123699329&opi=89978449">Snakes</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjQ7M369dyLAxVaLkQIHXATCnoQFnoECBYQAw&url=https%3A%2F%2Fbantam.earth%2Fdiy-spider-food%2F%23%3A~%3Atext%3DSuitable%2520food%2520includes%2520crickets%252C%2520mealworms%2Ctiny%2520insects%2520all%2520at%2520once.%26text%3DCarefully%2520place%2520the%2520food%2520in%2Cthe%2520food%2520into%2520the%2520tank.&usg=AOvVaw1PFeQwsKzBNkwBCwDAb7ds&opi=89978449">Spiders</a></li>
-                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiSpPHH9dyLAxUBDkQIHUYVCJIQFnoECBAQAw&url=https%3A%2F%2Fvcahospitals.com%2Fknow-your-pet%2Fturtles-aquatic-feeding%23%3A~%3Atext%3DDesirable%2520vegetables%2520include%2520dark%252C%2520leafy%2C%252C%2520turnip%2520greens%252C%2520and%2520clover.&usg=AOvVaw332WHLXTPpvr-H2PxHfBxe&cshid=1740421146203641&opi=89978449">Turtles</a></li>
+                    <li> <a href="#">Why Adopt</a></li>
+                    <li> <a href="#">Gallery</a></li>
+                    <li> <a href="#">Testimonials</a></li>
                 </ul>
             </nav>
             <div id="intromedia">
-                #Intro Media
                 <iframe src="https://www.youtube.com/embed/EajFIdetqV4?si=_dA232ZboTgMNT_y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <main id="pagemain">
-                #Pagemain
+                
                 <p>Welcome to Best Friend Pet Adoption here we have a variety of many pets. Whether that be from rodents or dogs. We have variety of sizes too! Or if you are more interested we do have spdiers and snakes! We also provide links below in order to see all your options</p>
             </main>
-            <div id="card001" class="cards">Dogs</div>
-            <div id="card002"class="cards">Cats</div>
-            <div id="card003"class="cards">Fish</div>
-            <div id="card004"class="cards">Frogs</div>
-            <div id="card005"class="cards">Birds</div>
-            <div id="card006"class="cards">Rodents</div>
-            <div id="card007"class="cards">Rabbits</div>
-            <div id="card008"class="cards">Snakes</div>
-            <div id="card009"class="cards">Spiders</div>
-            <div id="card010"class="cards">Turtles</div>
+            
+                <div id="card001" class="cards"><h2>Dogs</h2></div>
+                <div id="card002"class="cards"><h2>Cats</h2></div>
+                <div id="card003"class="cards"><h2>Fish</h2></div>
+                <div id="card004"class="cards"><h2>Frogs</></div>
+                <div id="card005"class="cards"><h2>Birds</h2></div>
+                <div id="card006"class="cards"><h2>Rodents</h2></div>
+                <div id="card007"class="cards"><h2>Snakes</h2></div>
+                <div id="card008"class="cards"><h2>Spiders</h2></div>
+                <div id="card009"class="cards"><h2>Turtles</h2></div>
+            
             <footer id="pagefooter">
-                    <h2>Reliable Pet Stores</h2>
-                        <li><a href="https://www.chewy.com">Chewy</a></li>
-                        <li><a href="https://www.petflow.com">Pet Flow</a></li>
-                        <li><a href="https://www.petsmart.com">Pet Smart</a></li>
-                        <li><a href="https://www.petfood.express">Pet Food Express</a></li>
                     
             </footer>
             <footer id="pagedetails">
                 <h2>Information</h2>
                 <ul>
                    
-                   <li> <a href="#">Why Adopt</a></li>
-                    <li><a href="#">Adoption Process</a></li>
-                    <li><a href="#">Frequently Asked Questions</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
+                    <p>4355 South Jameson St CA 3453</p>
+                    <p>(559)673-3466</p>
+                    <p>bestfriendadoption@gmail.com</p>
+                    
                 </ul>
             </footer>
         </div>
