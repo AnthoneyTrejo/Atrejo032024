@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox List</title>
+</head>
+<style>
+    nav
+    {
+        background-color: seagreen;
+        padding: 1rem;
+    }
+    ul
+    {
+        background-color: pink;
+        list-style-type:none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    li
+    {
+        background-color: crimson;
+        padding: 1rem;
+        border: 1px solid  black;
+        text-align: center;
+    }
+    @media screen and (min-width:768px) 
+    {
+        body
+        {
+            background-color: green;
+        }
+        ul
+        {
+            display: flex;
+            flex-direction: row;
+            gap:3rem;
+            justify-content: center;
+        }
+        li
+        {
+            min-width: 110px;
+        }
+    }
+</style>
+<body>
+    <h1>Flexbox List</h1>
+    <nav>
+        <ul>
+            <li><a target="_blank" href="index.html">Home</a></li>
+            <li><a target="_blank" href="whyadopt.html">Why Adopt</a></li>
+            <li><a target="_blank" href="ouranimals.html">Our Animals</a></li>
+            <li><a target="_blank" href="testomonials">testomonials</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
