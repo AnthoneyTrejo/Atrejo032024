@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladiators - Logical Operators</title>
+</head>
+<body>
+    <h1>Spartacus Logical Operators</h1>
+    <script>
+        let age = 19;
+        let height = 83;
+        let weight = 199;
+        let sex = "Male";
+        let name = "Gladiator";
+        let isGladiator = false;
+        let isAlive = true;
+
+        if( age >= 18 && height >= 72 && weight >= 200)
+        {
+            console.log("You are a gladiator, ");
+            isGladiator = true
+        }
+        else
+        {
+            console.log("The emperor says gladiator is equal to false ");
+            isGladiator= false;
+        }
+        if( age >= 18 || height >= 72 || weight >= 200)
+        {
+            console.log("The Emperor says you are a gladiator ");
+            isGladiator = true
+        }
+        
+    </script>
+</body>
+</html>

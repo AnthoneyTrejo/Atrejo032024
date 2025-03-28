@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="https://use.typekit.net/vfz0rlx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wup4lgm.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/eix7fda.css">
+</head>
+<style>
+    :root
+    {
+        --primary-color:#38358C;
+        --secondary-color:#4945BF;
+        --teritary-color:#5D4AD9;
+    }
+    body
+    {
+        background-image: url(Images/bodybg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        max-width: 1200px;
+        width: 80%;
+        margin:auto;
+    }
+
+    #container
+    {
+        
+        margin:0 auto;
+        background-color: var(--primary-color);
+        padding: 1rem;
+        gap: 10px;
+        border-radius: 1rem 1rem 1rem 1rem;
+        width: 80%;
+        border:2px solid black;
+    }
+
+    #wrapper
+    {
+        background-color: var(--secondary-color);
+        max-width: 80%;
+        margin: auto;
+        border-radius: 1rem 1rem 1rem 1rem;
+        padding: 1rem;
+        border:2px solid black;
+    }
+
+    #pageheader
+    {
+        background-color: var(--teritary-color);
+        min-height: 10rem;
+        grid-area: ph;
+        background-image: url(Images/phbg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #pageheader blockquote
+    {
+        color:#6286a5; 
+        font-family: bdr-mono, sans-serif;
+        text-align: center;
+        bottom:-120px;
+        position: relative;
+    }
+
+    #pageheader p
+    {
+        color:#6286a5; 
+        font-family: transducer-condensed, sans-serif;
+        text-align: center;
+        bottom:-120px;
+        position: relative;
+    }
+
+    #pagenav
+    {
+        background-color: var(--teritary-color);
+        min-height: 10rem;
+        grid-area: pn;
+        border:2px solid black;
+        font-size: 1.5rem;
+    }
+
+    #pagenav ul
+    {
+        list-style-type: none;
+        color:#6286a5;    
+        display: flex;
+        gap: 10px;
+        text-align: center center;
+        position: relative;
+        right:calc(50% - 450px);
+        bottom:-80px
+    }
+
+    #pagenav a
+    {
+        color:#6286a5;       
+         transition-duration: 3s;
+        font-family: transducer-condensed, sans-serif;
+        
+    }
+
+    #pagenav a:hover
+    {
+        color: lightblue;
+    }
+
+    #media
+    {
+        background-color: var(--teritary-color);
+        min-height: 10rem;
+        grid-area:m;
+        border:2px solid black;
+    }
+
+    iframe
+    {
+        width: 80%;
+        height: 80%;
+        aspect-ratio: 16/9;
+        margin: auto;
+        display: block;
+        border:2px solid black;
+    }
+
+    #pagemain
+    {
+        min-height: 10rem;
+        background-color: var(--teritary-color);
+        grid-area:pm;
+        border:2px solid black;
+    }
+
+    #pagemain h1
+    {
+        color:#6286a5; 
+        font-family: bitcount-mono-single-circle, sans-serif;
+        text-align: center;
+    }
+
+    #pagemain p
+    {
+        color:#6286a5; 
+        font-family: transducer-condensed, sans-serif;
+    }
+
+    #contacts
+    {
+        min-height: 10rem;
+        background-color: var(--teritary-color);
+        grid-area:c;
+        border:2px solid black;
+    }
+
+    #contacts p
+    {
+        color:#6286a5; 
+        font-family: transducer-condensed, sans-serif;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="logo"></div>
+        <div id="wrapper">
+            <div id="pageheader">
+                <blockquote>They say aim for the moon but I want to reach for the stars</blockquote>
+                <p>- Chase Stewart</p>
+            </div>
+            <nav id="pagenav">
+                <ul>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#signatures">Signatures</a></li>
+                    <li><a href="#missionbrief">Mission Brief</a></li>
+                    <li><a href="#facts">Facts</a></li>
+                    <li><a href="#donations">Donations</a></li>
+                </ul>
+            </nav>
+            <div id="media">
+                <iframe src="https://www.youtube.com/embed/WDjibPtiqcc?si=SkwiAcCOiFI4r663" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <main id="pagemain">
+                <h1>Background</h1>
+            </main>
+            <div id="contacts">
+                <p>reachingthestars@rts.org | (529) 367 - 5892</p>
+                <p>453 South Asada St</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

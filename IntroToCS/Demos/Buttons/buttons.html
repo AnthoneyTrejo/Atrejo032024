@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons + JavaScript</title>
+    <style>
+        button
+        {
+            background-color: aqua;
+            border-radius: 25px;
+            padding:0.5rem;
+        }
+
+        .display
+        {
+            height:100px;
+            width:100px;
+            margin:2rem auto;
+            display:flex;
+            border:1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button onClick="ChangeDivOne()">
+        Change Div 1
+    </button>
+    
+    <button onDblclick="ChangeDivTwo()">
+        Change Div 2
+    </button>
+
+    <button onMouseover="modifyDivTres()">
+        Change Div 3
+    </button>
+
+    <button onClick="modifyDivFour()">
+        Change Div 4
+    </button>
+
+    <hr />
+    <!-- div.display#d$$$*4-->
+    <div class="display" id="d001">d001</div>
+    <div class="display" id="d002">d002</div>
+    <div class="display" id="d003">d003</div>
+    <div class="display" id="d004">d004</div>
+
+    <script>
+        // Create function
+        function ChangeDivOne()
+        {
+            window.document.getElementById("d001").style.height="200px";
+        
+        // Assign a value to the variable
+        let d1;
+        d1 = window.document.querySelector('#d001')
+        d1.style.backgroundColor="yellow"
+        }
+        function ChangeDivTwo()
+
+        {
+            window.document.getElementById("d002").style.width="200px";
+            let d2;
+            d2 = window.document.querySelector('#d002')
+        d2.style.backgroundColor="coral"
+        }
+        
+        function modifyDivTres()
+        {
+            let div3;
+            div3=window.document.querySelector("#d003");
+            div3.style.backgroundColor= "orange";
+            div3.style.opacity="0.7";
+
+        }
+        function modifyDivFour()
+        {
+            let div3;
+            div3=window.document.querySelector("#d004");
+            div3.style.backgroundColor= "crimson";
+            div3.style.rotate="90deg";
+
+        }
+
+
+
+        window.document.getElementById("d001").style.backgroundColor="red";
+        window.document.getElementById("d002").style.backgroundColor="green";
+        window.document.getElementById("d003").style.backgroundColor="blue";
+        window.document.getElementById("d004").style.backgroundColor="purple";
+    </script>
+</body>
+</html>

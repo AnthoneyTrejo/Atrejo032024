@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop Multiplication Mable</title>
+</head>
+<style>
+    table, th, td
+    {
+        border:1px solid black;
+        padding:1rem;
+    }
+
+    th
+    {
+        background-color: rgb(124, 13, 13);
+
+    }
+
+    tr:hover
+    {
+        background-color: rgb(6, 68, 82);
+    }
+    td:hover
+    {
+        background-color: rgb(63, 4, 63);
+    }
+</style>
+<body>
+    <h1>For Loop Multiplication Table</h1>
+    
+    <script>
+        // Create Range Variable
+        let range;
+
+        //Script Functions
+
+        requestInput();
+        validateInput();
+        buildTable();
+
+        function requestInput()
+        {
+            range = window.prompt('Enter the multiplication range');
+        }
+        function validateInput()
+        {
+            while(isNaN(range) || range < 1)
+            {
+                window.alert("Invalid Request. Stop being retarded and enter a positive number!");
+                requestInput();
+            }
+        }
+        function buildTable()
+        {
+            // Set up Table
+        window.document.write('<table>');
+        window.document.write('<tr>');
+        window.document.write('<th> X </th>');
+
+        //For loop for horizontal factors(Table Headers)
+        for(let x = 1; x <= range ; x++)
+        {
+        // Code to run
+        document.write('<th>' + x + '</th>');
+        }
+
+        for(let i = 1 ; i <= range ; i++)
+        {
+            document.write('<tr>')
+            document.write('<th>' + i + '</th>');
+            // for loop for products
+                for(let z = 1 ; z <= range ; z++)
+                {
+                    document.write('<td>' + z * i + '</td>');
+                }
+        
+        }
+
+        }
+
+        
+
+
+    
+
+    
+        // JavaScript Math Operator
+        //window.document.write('Hello World')
+        console.log('Hello Mundo');
+        console.log(2 + 2);
+        console.log(5 * 5);
+        console.log(20 / 4);
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029JA2AH</title>
+</head>
+<style>
+    div
+    {
+        width: 500px;
+        height: 500px;
+        margin:auto;
+        margin-top: 20px;
+    }
+    #bounce
+    {
+        transition:all 5s;
+        background-image: url(Images/frog.png);
+        background-attachment: fixed;
+            background-size: contain;
+            background-position: center ;
+            background-repeat: no-repeat;
+
+    }
+    #bounce:hover
+    {
+        animation-name: bounce;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    #spin
+    {
+        transition:all 5s;
+        background-image: url(Images/download.png);
+        background-size: cover;
+            background-position: center ;
+            background-repeat: no-repeat;
+    }
+    #spin:hover
+    {
+        animation-name: spin;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    #speed
+    {
+        transition:all 5s;
+        background-image: url(Images/flash.png);
+        background-size: cover;
+            background-position: center ;
+            background-repeat: no-repeat;
+    }
+    #speed:hover
+    {
+        animation-name: speed;
+        animation-duration: 10ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes bounce
+    {
+        0%{}
+        25%{transform:translate(700px, 500px)rotate(5deg)}
+        50%{transform:translate(800px,-200px)rotate(90deg)}
+        75%{transform:translate(900px,200px)rotate(180deg)}
+        100%{transform:translate(1000px,-100px)rotate(360deg)}
+    
+    }
+    @keyframes spin 
+    {
+        25%{transform: rotate(90deg)translate(200px, 200px);}
+        50%{transform: rotate(180deg)translate(250px, 250px);}
+        75%{transform: rotate(270deg)translate(300px, 300px);}
+        100%{transform: rotate(360deg)translate(350px, 350px);}
+    }
+    @keyframes speed {
+        from{transform: translate(-100px, 0px);}
+        to{transform: translate(500px, 0px);}
+    }
+</style>
+<body>
+    <h1>A029JA2AH</h1>
+    <div id="bounce"></div>
+    <div id="spin"></div>
+    <div id="speed"></div>
+</body>
+</html>

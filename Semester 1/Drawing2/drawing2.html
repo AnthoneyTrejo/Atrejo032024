@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing 2</title>
+    <style>
+#canvas
+    {
+        border: 2px solid seagreen;
+        margin:auto;
+        display: block;
+    }
+    </style>
+    
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = window.document.querySelector('#canvas')
+        
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = 500;
+        canvas.height = 500;
+        canvas.style.backgroundColor = 'lightblue'
+
+        ctx.fillStyle = "darkorange";
+            
+            ctx.beginPath();
+            ctx.rect(150, 150, 200, 300);
+            ctx.fill();
+            ctx.closePath();
+
+        ctx.fillStyle = "white";
+            
+            ctx.beginPath();
+            ctx.rect(150, 230, 200, 90);
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.fillStyle = "darkorange";
+            ctx.beginPath();
+            ctx.moveTo(151, 150);
+            ctx.lineTo(165, 100);
+            ctx.lineTo(335, 100);
+            ctx.lineTo(350, 150);
+            ctx.fill();
+            
+            ctx.strokeStyle ='black';
+        ctx.fillStyle = 'darkorange';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(240, 275, 30, 3, 6.28, false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle ='black';
+        ctx.fillStyle = 'darkorange';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(240, 274, 30, 0, 3, false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle ='black';
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+        ctx.arc(260, 270, 35, 4, 5, false);
+        ctx.fill();
+        ctx.closePath();
+
+            ctx.lineWidth = "1";
+            ctx.fillStyle="white";
+            ctx.beginPath();
+            ctx.arc(250, 130, 15, 0, 2 * Math.PI); // * Math.PI
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.strokeStyle = "black"
+            ctx.beginPath();
+            ctx.moveTo(163, 110);
+            ctx.lineTo(339, 110);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.strokeStyle = "black"
+            ctx.beginPath();
+            ctx.moveTo(150, 150);
+            ctx.lineTo(350, 150);
+            ctx.stroke();
+
+
+
+
+
+
+        
+
+        
+
+        
+
+        
+
+
+
+            
+    </script>
+</body>
+</html>

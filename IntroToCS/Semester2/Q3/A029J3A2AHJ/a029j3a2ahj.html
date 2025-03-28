@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2AHJ</title>
+</head>
+<style>
+    body{background-image: url(Images/Firefly\ beautiful\ forest\ background\ sunset\ 74250.jpg);
+        background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+        color: aliceblue;}
+    #toothless
+    {
+        background-image: url(Images/toothless2.png); 
+        height: 500px;
+        width: 500px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center ;
+        top:200px;
+        position: absolute;
+        transform: scale(.5);
+    }
+    #btn1
+    {
+    position: absolute;
+    }
+    button{height: 200px;
+        width: 200px;
+        background-image: url(Images/hiccup.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center ;
+        position: relative;
+        background-color: transparent;
+        position: relative;
+        text-align: center;
+        transform: scale(.5);
+        left:350px;
+        top:500px;
+    }
+    audio
+    {
+        display: transparent;
+    }
+    @keyframes leftright
+    {
+        from{transform: translate(0px);
+        background-image: url(Images/toothless.gif);}
+        to{
+            background-image: url(Images/toothless.gif);
+            transform:translate(500px);}
+    }
+    .animatetoothless
+    {
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+        animation-timing-function:cubic-bezier(.07,1.25,.94,-0.8);
+        animation-name: leftright;
+        animation-direction:alternate;
+    }
+</style>
+<body>
+<h1>A029J3A2AHJ</h1>
+<div id="toothless"></div>   
+<div id="btn1">
+    <button onclick="addClass()">
+        
+    </button>
+    </div>
+    <script>
+        // Create orbit variable
+        let leftright = window.document.querySelector('#toothless');
+        function addClass()
+        {
+            leftright.classList.toggle('animatetoothless');
+        }
+    </script>
+
+</body>
+</html>

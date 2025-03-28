@@ -1,0 +1,243 @@
+
+    :root
+    {
+        --primary-color:#260508;
+        --secondary-color:#732929;
+        --tertiary-color:#A6524B;
+        --quaternary-color:#F29979;
+    }
+
+    body
+    {
+        background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+        background-image: url(Images/bodybackground.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        
+    }
+
+    #container
+    {
+        max-width: 1200px;
+        padding: 0rem;
+        background-color: var(--tertiary-color);
+        color:black;
+        width: 80%;
+        margin: auto;
+        border-radius: 1rem 1rem 1rem 1rem;
+    }
+
+    #wrapper
+    {
+        background-color: var(--quaternary-color);
+        margin: auto;
+        width: 80%;
+        gap: 10px;
+
+    }
+
+    #logo
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        position: relative;
+        top: 1px;
+        right: calc(50% - 420px);
+        background-image: url(Images/Logo.png);
+        background-position: center center;
+        box-shadow: 5px 5px 8px black;
+
+    }
+
+    #pageheader
+    {
+        background-color: var(--quaternary-color);
+        background-image: url(Images/pageheaderbackground.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        text-align: center;
+        min-height: 20rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        grid-area: ph;
+        border: 1px solid black;
+    }
+
+    #pageheader p
+    {
+        font-family: "transducer", sans-serif;    
+        position: relative;
+        top: 80px;
+    }
+       
+
+    #pageheader blockquote
+    {
+        font-family: "bdr-mono", sans-serif;    
+        position: relative;
+        top: 80px;
+        font-size: larger;
+
+    }
+
+    #pagenav
+    {
+        background-color: var(--quaternary-color);
+        grid-area: pn;
+        padding: 1rem;
+        min-height: 7rem;
+        box-sizing: border-box;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #pagenav ul
+    {
+        list-style-type:none;
+        font-family: "transducer", sans-serif;
+        padding:0;
+        display: flex;
+        justify-content: space-evenly;;
+    }
+
+    #pagenav li
+    {
+        font-family: "transducer", sans-serif;
+    }
+
+    #pagenav a
+    {
+        color: black;
+    }
+
+    #pagenav a:hover
+    {
+        color:#96463E ;
+    }
+
+    #media
+    {
+        background-color: var(--quaternary-color);
+        grid-area: m;
+        padding: 1rem;
+        min-height: 5rem;
+        box-sizing: border-box;
+        text-align: center;
+        border: 1px solid black;
+
+    }
+
+    iframe
+    {
+        width: 90%;
+        box-sizing: border-box;
+        border: 0;
+        margin: 0 auto;
+        display: block;
+        aspect-ratio: 16 /9 ; 
+    }
+
+    #pagemain
+    {
+        background-color: var(--quaternary-color);
+        grid-area: pm;
+        padding: 1rem;
+        min-height: 5rem;
+        box-sizing:border-box;
+        border: 1px solid black;
+    }
+
+    #pagemain p
+    {
+        font-family: "transducer", sans-serif;    }
+
+    #pagemain h1
+    {
+        font-family: "bitcount-mono-single-circle", sans-serif;
+        text-align: center;
+    }
+
+    #contacts
+    {
+        background-color: var(--quaternary-color);
+        grid-area: c;
+        padding: 1rem;
+        min-height: 5rem;
+        box-sizing: border-box;
+        border: 1px solid black;
+
+    }
+
+    #contacts p
+    {
+        font-family: "transducer", sans-serif;
+        text-align: center;
+    }
+
+    #contacts h3
+    {
+        font-family: "bitcount-mono-single-circle", sans-serif;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        #wrapper
+        {
+            display: grid;
+            grid-template-areas:
+            "ph ph ph"
+            "pn m m"
+            "pm pm pm"
+            "c c c";
+            width: 80%;
+        }
+        
+        #container
+        {
+            width:80%;
+            
+        }
+
+        #pagenav
+        {
+            text-align: center;
+            padding: 1rem;
+            min-height: 5rem;
+            box-sizing: border-box;
+            border: 1px solid black;
+            min-width: 50%;
+        }
+
+        #pagenav ul
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+
+        }
+
+        #logo
+        {
+            top:-1px;
+            right:-350px;
+        }
+
+        #wrapper
+        {
+            padding-top: 20px;
+            padding-bottom:20px;
+            padding-left: 20px;
+            padding-right:20px;
+        }
+    }

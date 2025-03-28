@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Welcome!</title>
+</head>
+
+<style>
+    #container
+    {
+        background-color: seagreen;
+        max-width: 1200px;
+        padding: 1rem;
+        border-radius: 1rem 1rem 1rem 1rem;
+        margin:auto;
+    }
+    #wrapper
+    {
+        background-color: limegreen;
+        border-radius: 1rem 1rem 1rem 1rem;
+        border: 1px solid black;
+        width:80%;
+        margin: auto;
+        display: grid;
+        grid-template-areas:
+        "ph ph ph"
+        "pv m m"
+        "pv  m m"
+        "pm pm pm"
+        "ct ct ct"
+        ;
+    }
+
+    #pageheader
+    {
+        min-height: 10rem;
+        background-color: burlywood;
+        border:1px solid black;
+        grid-area: ph;
+    }
+
+    #pageheader blockquote
+    {
+        text-align: center;
+    }
+
+    #pageheader p
+    {
+        text-align: center;
+    }
+
+    #pagenav
+    {
+        min-height: 5rem;
+        background-color: burlywood;
+        border:1px solid black;
+        grid-area: pv;
+    }
+
+    #pagenav ul
+    {
+        
+        list-style-type: none;
+    }
+
+    #pagenav a
+    {
+        color:red;
+    }
+
+    #media
+    {
+        min-height: 15rem;
+        background-color: burlywood;
+        border:1px solid black;
+        grid-area: m;
+    }
+
+    iframe
+    {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        aspect-ratio: 16/9;
+    }
+
+    main#pagemain
+    {
+        min-height: 15rem;
+        background-color: burlywood;
+        border:1px solid black;
+        grid-area: pm;
+    }
+
+    #pagemain h1
+    {
+        text-align: center;
+        color:red;
+    }
+
+    #pagemain p
+    {
+        color:red;
+    }
+
+    #contacts
+    {
+        min-height: 10rem;
+        background-color: burlywood;
+        border:1px solid black;
+        grid-area: ct;
+    }
+
+    #contacts p{
+        text-align: center;
+    }
+
+
+</style>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <div id="pageheader">
+                <blockquote>
+                    Don't Mine At Night!
+                </blockquote>
+                <p>
+                    - Chase Stewart
+                </p>
+            </div>
+            <div id="pagenav">
+                <ul>
+                    <li><a href="#welcome">Welcome!</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#creators">Creators</a></li>
+                    <li><a href="#donations">Donations</a></li>
+                </ul>
+            </div>
+            <div id="media">
+                <iframe src="https://www.youtube.com/embed/jAS-GKmQ_5o?si=yR0Muq6V3KqjMMPr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <media id="pagemain">
+                <h1>Welcome!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos laudantium adipisci eius, non, ipsa, provident ratione quia consectetur possimus accusamus eum quaerat quam. Atque dolorem numquam magni nihil aliquam odio.</p>
+            </media>
+            <div id="contacts">
+                <p>
+                    343 N Nether St CA | 423-555-1337
+                </p>
+                <p>
+                    minecraftserver@ms.org
+                </p>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

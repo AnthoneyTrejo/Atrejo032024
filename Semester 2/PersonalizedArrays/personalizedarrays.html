@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Cars</title>
+</head>
+<body>
+    <h1>
+        My Favorite Cars
+    </h1>
+    
+
+    <script>
+        let myCars;
+
+        myCars = [];
+
+        myCars[0] = "Chervlot Camero"
+        myCars[1] = "Porsche 911";
+        myCars[2] = "Mazda Rx7";
+        myCars[3] = "Mazda Mx5 Roadster Eunos";
+        myCars[4] = "Nissan Skyline R34";
+        myCars[5] = "Toyota Supra Mk4";
+        myCars[6] = "1970 Dodge Charger";
+
+        myCars.pop();
+        myCars.push("Honda Civic Type R");
+        
+        myCars.shift();
+        myCars.unshift("1998 Mitsubishi Eclipse");
+
+        console.log(myCars.length);
+
+        myCars.forEach(function(cars, index)
+        {
+            console.log("My dream car is " + cars + index);
+        });
+
+    </script>
+</body>
+</html>

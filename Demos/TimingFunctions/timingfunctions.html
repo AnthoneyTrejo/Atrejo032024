@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Functions</title>
+</head>
+<body>
+    <h1>Timing Functions</h1>
+    
+    <button onclick="startTimeout()">Start Timeout</button>
+    <button onclick="startInterval()">Start Interval</button>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <div id="output"></div>
+
+    <script>
+        let intervalId;
+        let counter = 0;
+        
+        // setTimeout: runs once after a delay
+        function startTimeout() {
+            document.getElementById('output').innerHTML = 'Timer starting...';
+            setTimeout(() => {
+                document.getElementById('output').innerHTML = 'Timeout completed!';
+            }, 3000); // runs after 3 seconds
+        }
+
+        // setInterval: runs repeatedly at set intervals
+        function startInterval() {
+            intervalId = setInterval(() => {
+                counter++;
+                document.getElementById('output').innerHTML = `Counter: ${counter}`;
+            }, 1000); // runs every 1 second
+        }
+
+        // clearInterval: stops the interval
+        function stopInterval() {
+            clearInterval(intervalId);
+            document.getElementById('output').innerHTML = 'Interval stopped!';
+        }
+    </script>
+</body>
+</html>

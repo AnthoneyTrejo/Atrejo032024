@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    }
+h1
+    {text-align:center;}
+
+div
+{
+    color:white;
+    margin:auto;
+    margin-bottom:40px;
+    padding:10px;
+}
+div.box
+{
+    width:200px;
+    height:200px;
+    background-color:steelblue;
+}
+div#one
+{
+    background-color: crimson;
+    transition:all 2s;
+}
+div#one:hover
+{
+    background-color: rgb(10, 81, 112);
+    border-radius: 26% 74% 8% 92% / 33% 78% 22% 67% ;
+    box-shadow:55px -10px purple;
+    transform:scale(.55) rotate(159deg) translate(550px, 60px) skew(.05deg, 3deg);
+
+}
+div#two
+{
+    background-color: teal;
+    transition:all 2s;
+}
+div#two:hover
+{
+    background-color: rgb(18, 173, 82);
+    rotate:360deg;
+    border-radius: 71% 29% 54% 46% / 83% 31% 69% 17% ;
+    box-shadow: inset 5em 1em teal;
+    transform:scale(2.5) rotate(60deg) translate(-20px, -80px) skew(7deg, 51deg);
+}
+div#three
+{
+    background-color: #1c0657;
+    transition:all 2s;
+}
+div#three:hover
+{
+    background-color: #570635;
+    rotate:360deg;
+    border-radius:15% 85% 5% 95% / 58% 57% 43% 42% ;
+    box-shadow:50px 10px gold, 0 .4em crimson;
+    transform:scale(2.5) rotate(100deg) translate(-70px, -80px) skew(80deg, 51deg);
+}
+div#four
+{
+    background-color: #194726;
+    transition:all 2s;
+}
+div#four:hover
+{
+    background-color:rgb(203, 91, 113);
+    rotate:360deg;
+    border-radius:15% 85% 5% 95% / 58% 57% 43% 42% ;
+    box-shadow:20px 10px 20px 25px black;
+    transform:scale(2.5) rotate(89deg) translate(520px, 80px) skew(70deg, 400deg);
+}
+</style>
+
+</head>
+
+<body>
+<h1> Demo</h1>
+
+<div class="box" id="one">
+</div>
+
+
+<div class="box" id="two">
+</div>
+
+
+<div class="box" id="three">
+</div>
+
+<div class="box" id="four">
+</div>
+
+
+
+</body>
+</html>

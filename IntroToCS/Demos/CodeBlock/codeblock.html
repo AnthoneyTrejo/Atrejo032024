@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Block</title>
+    <style>
+        pre
+        {
+            background-color: #333;
+            color: white;
+
+        }
+        span.comment
+        {
+            color: green;
+        }
+        span.tag
+        {
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mainheader">Code Block</h1>
+
+    <script>
+        // Style H1
+        // Create Variable
+        let headerOne;
+        // Assign value to variable
+        headerOne = window.document.querySelector('#mainheader');
+        // window.alert(headerOne);
+        // Style headerOne
+        headerOne.style.backgroundColor = 'yellow';
+        headerOne.style.padding = '2rem';
+    </script>
+    <hr>
+    <pre>
+        <code>
+            <span class="tag">&lt;script&gt;</span>
+                <span class="comment">// Style H1
+                // Create Variable
+                </span>let headerOne;
+                <span class="comment">// Assign value to variable</span>
+                headerOne = window.document.querySelector('#mainheader');
+                <span class="comment">// window.alert(headerOne);
+                // Style headerOne
+                </span>headerOne.style.backgroundColor = 'yellow';
+                headerOne.style.padding = '2rem';
+            <span class="tag">&lt;/script&gt;</span>
+        </code>
+    </pre>
+</body>
+</html>

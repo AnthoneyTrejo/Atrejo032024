@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <link rel="stylesheet" href="https://use.typekit.net/eix7fda.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wup4lgm.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vfz0rlx.css">
+
+    <style>
+        :root
+        {
+            --primary-color:#161540;
+            --secondary-color:#38358C;
+            --teritary-color:#614ED9;
+        }
+
+        body
+        {
+
+            background-image: url(Images/bodybg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #container
+        {
+            background-color: var(--primary-color);
+            max-width: 1200px;
+            padding: 1rem;
+            gap: 10px;
+            margin: 0 auto;
+        }
+        #logo
+        {
+
+        }
+
+        #wrapper
+        {
+            background-color: var(--secondary-color);
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #pageheader
+        {
+            background-color:  var(--secondary-color);
+            min-height: 5rem;
+        }
+
+        #pagenav
+        {
+            background-color: var(--secondary-color);
+            min-height: 5rem;
+        }
+
+        #media
+        {
+            background-color:  var(--secondary-color);
+            min-height: 5rem;
+        }
+        
+        main#pagemain
+        {
+            background-color:  var(--secondary-color);
+            min-height: 5rem;
+            grid-area: pm;
+        }
+
+        #contacts
+        {
+            min-height: 5rem;
+            grid-area: c;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="logo"></div>
+        <div id="wrapper">
+            <div id="pageheader">
+                <blockquote>They say aim for the moon but I want to reach for the stars</blockquote>
+                <p>- Chase Stewart</p>
+            </div>
+            <div id="pagenav">
+                <ul>
+                    <li><a href="#background">background</a></li>
+                    <li><a href="#signatures">signatures</a></li>
+                    <li><a href="#missions">missions</a></li>
+                    <li><a href="#facts">facts</a></li>
+                    <li><a href="#donations">donations</a></li>
+                </ul>
+            </div>
+            <div id="media">
+                <iframe src="https://www.youtube.com/embed/WDjibPtiqcc?si=SkwiAcCOiFI4r663" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <main id="pagemain">
+                <h1>Background</h1>
+            </main>
+            <div id="contacts">
+                <h2>contacts</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

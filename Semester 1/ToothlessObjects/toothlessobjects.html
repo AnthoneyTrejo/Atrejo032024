@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toothless Objects</title>
+    <style>
+        body
+        {
+            background-image: url(Images/empty-dark-forest-forest-natural-green-backgroundempty-dark-forest-forest-natural-green-bac_912214-16510.jpg);
+            background-attachment: fixed;
+        background-size: cover;
+        background-position: center ;
+        position: relative;
+        color:blue;
+        text-align: center;
+        top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Toothless Objects</h1>
+    
+
+    <script>
+        const NIGHTFURY = 
+            {
+                name: 'Toothless',
+                age :23,
+                color:'Black',
+                size: '26ft',
+                eyecolor: 'Emerald Green',
+                skin:'scaley',
+                isAlive: true,
+                isHappy: true,
+                roar: function(){return 'ROAR!'},
+                dig:function(){return '*digs*'},
+                growl:function(){return 'grrr'},
+                draw:function(){return '*draws lines*'},
+                plasmablast:function(){return '*plasma blasts*'},
+                retractstteeth:function(){return '*retractsteeth*'},
+                flies:function(){return '*flies*'},
+                dances:function(){return '*dances*'},
+                image: '<img src="Images/toothless.gif">',
+            }
+
+            // Examine the Dog
+            window.document.write(NIGHTFURY.name + '<br>');
+            window.document.write(NIGHTFURY.age + '<br>');
+            window.document.write(NIGHTFURY.color + '<br>');
+            window.document.write(NIGHTFURY.size + '<br>');
+            window.document.write(NIGHTFURY.eyecolor + '<br>');
+            window.document.write(NIGHTFURY.isHappy + '<br>');
+            window.document.write(NIGHTFURY.isAlive + '<br>');
+            window.document.write(NIGHTFURY.skin + '<br>');
+            window.document.write(NIGHTFURY.image + '<br>');
+            window.document.write(NIGHTFURY.roar() + '<br>');
+            window.document.write(NIGHTFURY.dig()+ '<br>');
+            window.document.write(NIGHTFURY.growl() + '<br>');
+            window.document.write(NIGHTFURY.draw() + '<br>');
+            window.document.write(NIGHTFURY.plasmablast()+ '<br>');
+            window.document.write(NIGHTFURY.flies() + '<br>');
+            window.document.write(NIGHTFURY.dances() + '<br>');
+    </script>
+</body>
+</html>
