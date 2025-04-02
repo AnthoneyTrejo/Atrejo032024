@@ -212,6 +212,30 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    #topnav
+    {
+        min-height: 10rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: tn;
+        background-image: url(Images/Backgrounds/download.jpeg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    #topnav ul
+    {
+        padding: 0;
+        gap: 2rem;
+    }
+    #topnav a
+    {
+        position:relative;
+        top: 70px;
+        font-size: 2rem;
+    }
     #pagedetails
     {
         min-height: 5rem;
@@ -260,6 +284,7 @@
             display: grid;
             grid-template-columns: 33.33% 33.33% 33.33%;
             grid-template-areas:
+            "tn tn tn"
             "ph ph ph"
             "im im im"
             "mn pm pm"
@@ -270,6 +295,7 @@
             "pf pf pf"
             "pd pd pd"
             "pd pd pd";
+
         }
         #pageheader
         {
@@ -400,6 +426,12 @@
     <div id="logo"></div>
     <div id="container">
         <div id="wrapper">
+            <nav id="topnav">
+                    <a href="Index.html">Home</a>
+                    <a href="#gallery">Gallery</a> 
+                    <a href="#feedback"> Feedback</a> 
+                </div>
+            </nav>
             <header id="pageheader">
                 <h1>Best Friend pet Adoption </h1>
                 <blockquote>Everyone needs a best friend in their life!</blockquote>
@@ -422,7 +454,7 @@
                 <div id="card001" class="cards"><h2>Dogs</h2></div>
                 <div id="card002"class="cards"><h2>Cats</h2></div>
                 <div id="card003"class="cards"><h2>Fish</h2></div>
-                <div id="card004"class="cards"><h2>Frogs></div>
+                <div id="card004"class="cards"><h2>Frogs</div>
                 <div id="card005"class="cards"><h2>Birds</h2></div>
                 <div id="card006"class="cards"><h2>Rodents</h2></div>
                 <div id="card007"class="cards"><h2>Snakes</h2></div>
@@ -430,7 +462,11 @@
                 <div id="card009"class="cards"><h2>Turtles</h2></div>
             
             <footer id="pagefooter">
-                    
+                    <ul>
+                        <li> <a href="#">Privacy Policy</a></li>
+                        <li> <a href="#">Signatures</a></li>
+                        <li> <a href="#">Terms of Use</a></li>
+                    </ul>
             </footer>
             <footer id="pagedetails">
                 <h2>Information</h2>
