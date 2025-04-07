@@ -1,0 +1,91 @@
+body
+{
+    background-color: hotpink;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
+}
+
+#formcontainer
+{
+    width: 60%;
+    max-width: 600px;
+    min-height: 300px;
+    padding: 1rem;
+    background-color: silver;
+    border: 2px solid black;
+    margin: auto;
+}
+
+p
+{
+    background-color: pink;
+    border: 1px solid black;
+    margin: auto;
+    max-width: 500px;
+    min-height: 200px;
+    color: white;
+}
+
+fieldset
+{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+legend
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label
+{
+    padding: .25rem;
+}
+
+input[type="text"] 
+{
+background-color:pink;
+border: 2px solid black;
+}
+
+input[name="language"] 
+{
+    outline: 2px solid pink;
+    outline-style:dashed ;
+}
+
+input[name="language"]:checked
+{
+    accent-color: pink;
+    outline-color:pink;
+}
+
+input[type="text"]::placeholder
+{
+    background-color: pink;
+    font-style: italic;
+    color: white;
+}
+
+select
+{
+    padding: .5rem;
+    background-color:pink;
+    color: white;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+}
+
+
+button
+{
+    padding: .5rem;
+    background-color:pink;
+    color: white;
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+}
