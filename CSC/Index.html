@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Friend Pet Adoption </title>
+</head>
+<style>
+    :root
+    {
+        --color-primary:rgb(31.4,78.4, 47.1 );
+        --color-secondary:seagreen;
+    }
+    body
+    {
+       background-color:rgb(22, 53, 32);
+       color: white;
+       background-image: linear-gradient(to bottom, seagreen 10%, rgb(34, 101, 63) 20%);
+    }
+    #container
+    {
+            padding: 1rem;
+            background-color: var(--color-primary);
+            max-width: 1200px;
+            width: 80%;
+            margin: auto;
+            padding-top: 5rem;
+    }
+    #wrapper
+    {
+            width: 80%;
+            margin: auto;
+            gap: 10px; 
+    }
+    #logo
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            padding:1.5rem;
+            box-sizing:border-box;
+            position:relative;
+            top:140px;
+                left:calc(50% - 75px);
+            background-image: url(Images/logo2.png);
+            background-position: center center;
+            
+        }
+    #pageheader
+    {
+        min-height: 10rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: ph;
+        background-image: url(Images/cat+dog/large/cat-dog.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    #mainnav
+    {
+        min-height: 7rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: mn;
+
+    }
+    #mainnav ul
+    {
+        padding: 0;
+    }
+    #intromedia
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: im;
+  
+    }
+    #pagemain
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        grid-area: pm;
+        padding: 1rem;
+        background-image: url(Images/Backgrounds/Firefly\ a\ beautiful\ green\ forest\ that\ leads\ to\ a\ sunset\ 77433.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #card001{min-height: 5rem;
+        background-color: rgb(245, 26, 26);
+        grid-area: c1;
+        background-image: url(Images/dogs/medium/dog-leash.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cards{background-color: var(--color-secondary);
+    min-height: 150px;
+    padding-top:0 ;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 80%;
+    margin: auto;
+    margin-bottom:1rem;
+    color: white;}
+
+    .cards h2
+    {
+        margin-top:0;
+        background-color: var(--color-secondary);
+        opacity:0.8;
+    }
+    #card002
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/cats/small/kitten.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: c2;
+        
+    }
+    #card003
+    {min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/fish/large/water-glass-g7e8a49acd_1920.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: c3;
+        
+    }
+    #card004
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/frogs/large/frog-fingers.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c4;
+        
+    }
+    #card005
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/birds/large/macaws.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c5;
+        
+    }
+    #card006
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/rodents/medium/guinea-pig1.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c6;
+        
+    }
+    #card007
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/snakes/large/king-cobra-gf7451f30d_1280.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c7;
+        
+    }
+    #card008
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/spiders/medium/spider-g6a02179ae_1920.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c8;
+        
+    }
+    #card009
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        background-image: url(Images/turtles/medium/turtle-sweater.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-area: c9;
+        
+    }
+    #pagefooter
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: pf;
+        background-image: url(Images/Backgrounds/Firefly\ background\ image\ of\ a\ green\ field\ and\ paw\ prints\ 83459.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #topnav
+    {
+        min-height: 10rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: tn;
+        background-image: url(Images/Backgrounds/download.jpeg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    #topnav ul
+    {
+        padding: 0;
+        gap: 2rem;
+    }
+    #topnav a
+    {
+        position:relative;
+        top: 70px;
+        font-size: 2rem;
+    }
+    #pagedetails
+    {
+        min-height: 5rem;
+        background-color: var(--color-secondary);
+        padding: 1rem;
+        grid-area: pd;
+        background-image: url(Images/Backgrounds/Firefly\ a\ full\ image\ of\ just\ grass\ 83459.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    a
+    {
+        color: white;
+    }
+    h1, p, blockquote
+    {
+        background-color: var(--color-secondary);
+        border-radius:1rem 1rem 1rem 1rem;
+        opacity: 0.8;
+        padding: 1rem;
+        padding-top:0 ;
+    }
+    li
+    {
+        list-style-type:none;
+    }
+    #pageheader h1
+    {
+        position: relative;
+        top: 20%;
+        padding-top: 1rem;
+    }
+    #pageheader blockquote
+    {
+        position: relative;
+        top: 25%;
+        padding-top: 1rem;
+        font-size: 20px;
+    }
+    
+    @media screen and (min-width: 768px)
+    {
+        #wrapper
+        {
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-areas:
+            "tn tn tn"
+            "ph ph ph"
+            "im im im"
+            "mn pm pm"
+            "mn pm pm"
+            "c1 c2 c3"
+            "c4 c5 c6"
+            "c7 c8 c9"
+            "pf pf pf"
+            "pd pd pd"
+            "pd pd pd";
+
+        }
+        #pageheader
+        {
+                border: 1px solid black;
+                text-align: center;
+                min-height: 20rem;
+        }
+        #mainnav
+        {
+            
+                
+                border: 1px solid black;
+                min-height: 15rem;
+                line-height: 1.5;
+        }
+        #intromedia
+        {
+            
+                
+                border: 1px solid black;
+                text-align: center;
+                min-height: 14rem;
+        }
+        iframe
+        {
+            
+            padding:1rem;
+            display:block;
+            margin: 0 auto;
+            aspect-ratio: 16 /9 ;
+            width:90%;
+            border-radius:1.5rem ;
+        }
+        #pagemain
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 15rem;
+        }
+        p
+        {
+            text-align: center;
+            
+        }
+        #card001{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card002
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #card003{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card004
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #card005
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #card006
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #card007{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card008
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+                
+        }
+        #card009
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #pagefooter
+        {
+            
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #pagedetails
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        }
+</style>
+<body>
+    <div id="logo"></div>
+    <div id="container">
+        <div id="wrapper">
+            <nav id="topnav">
+                    <a href="Index.html">Home</a>
+                    <a href="#gallery">Gallery</a> 
+                    <a href="#feedback"> Feedback</a> 
+                </div>
+            </nav>
+            <header id="pageheader">
+                <h1>Best Friend pet Adoption </h1>
+                <blockquote>Everyone needs a best friend in their life!</blockquote>
+            </header>
+            <nav id="mainnav">
+                <ul>
+                    <li> <a href="#">Why Adopt</a></li>
+                    <li> <a href="#">Gallery</a></li>
+                    <li> <a href="#">Testimonials</a></li>
+                </ul>
+            </nav>
+            <div id="intromedia">
+                <iframe src="https://www.youtube.com/embed/EajFIdetqV4?si=_dA232ZboTgMNT_y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <main id="pagemain">
+                
+                <p>Welcome to Best Friend Pet Adoption here we have a variety of many pets. Whether that be from rodents or dogs. We have variety of sizes too! Or if you are more interested we do have spdiers and snakes! We also provide links below in order to see all your options</p>
+            </main>
+            
+                <div id="card001" class="cards"><h2>Dogs</h2></div>
+                <div id="card002"class="cards"><h2>Cats</h2></div>
+                <div id="card003"class="cards"><h2>Fish</h2></div>
+                <div id="card004"class="cards"><h2>Frogs</div>
+                <div id="card005"class="cards"><h2>Birds</h2></div>
+                <div id="card006"class="cards"><h2>Rodents</h2></div>
+                <div id="card007"class="cards"><h2>Snakes</h2></div>
+                <div id="card008"class="cards"><h2>Spiders</h2></div>
+                <div id="card009"class="cards"><h2>Turtles</h2></div>
+            
+            <footer id="pagefooter">
+                    <ul>
+                        <li> <a href="#">Privacy Policy</a></li>
+                        <li> <a href="#">Signatures</a></li>
+                        <li> <a href="#">Terms of Use</a></li>
+                    </ul>
+            </footer>
+            <footer id="pagedetails">
+                <h2>Information</h2>
+                <ul>
+                
+                    <p>4355 South Jameson St CA 3453</p>
+                    <p>(559)673-3466</p>
+                    <p>bestfriendadoption@gmail.com</p>
+                    
+                </ul>
+            </footer>
+        </div>
+    </div>
+    
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Grid</title>
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing: 0;
+        }
+        body
+        {
+            background-color: rgb(144, 32, 136);
+        }
+        #wrapper
+        {
+            background-color: rgb(82, 226, 82);
+            min-height:100vh;
+            width: 90%;
+            display:grid;
+        grid-template-areas: 
+        "main main a1 a2"
+        "main main a3 a4"
+        "nav s1 s1 aside"
+        "s2 s2 footer aside "
+        ;
+        margin: auto;
+        }
+        aside
+        {
+            min-height:150px;
+            background-color: rgb(224, 134, 102);
+            padding:1rem;
+            border:1px solid black;
+            grid-area: aside;
+        }
+        nav
+        {
+            min-height:150px;
+            background-color: teal;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: nav;
+        }
+        main
+        {
+            min-height:150px;
+            background-color: crimson;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: main;
+        }
+        #section1
+        {
+            min-height:150px;
+            background-color: burlywood;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: s1;
+        }
+        #section2
+        {
+            min-height:150px;
+            background-color: orchid;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: s2;
+        }
+        #article1
+        {
+            min-height:150px;
+            background-color: rgb(135, 202, 222);
+            padding:1rem;
+            border:1px solid black;
+            grid-area: a1;
+        }
+        #article2
+        {
+            min-height:150px;
+            background-color: orchid;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: a2;
+        }
+        #article3
+        {
+            min-height:150px;
+            background-color: burlywood;
+            padding:1rem;
+            border:1px solid black;
+            grid-area: a3;
+        }
+        #article4
+        {
+            min-height:150px;
+            background-color: rgb(175, 41, 14);
+            padding:1rem;
+            border:1px solid black;
+            grid-area: a4;
+        }
+        footer
+        {
+            min-height:150px;
+            background-color: navajowhite;
+            padding:1rem;
+            border:1px solid black;
+            grid-area:footer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Layout Grid</h1>
+    
+    <div id="wrapper">
+        <section id="section1">section1</section>
+        <section id="section2">section2</section>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <article id="article1">Article 001</article>
+        <article id="article2">Article 002</article>
+        <article id="article3">Article 003</article>
+        <article id="article4">Article 003</article>
+        <footer>Footer</footer>
+    </div>
+    <!-- end wrapper -->
+</body>
+</html>

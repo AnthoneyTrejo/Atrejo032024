@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Elements</title>
+    <style>
+        body
+        {
+            background-color: seagreen;
+        }
+        button
+        {
+            background-color: teal;
+            padding:16px;
+            font-size: 20px;
+        }
+
+        div
+        {
+            background-color:purple;
+            transition: all .5s;
+            border: 2px solid silver;
+            margin: auto;
+        }
+
+        div:hover
+        {
+            background-color: red;
+            transform: translateY(50px);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Add Elements
+    </h1>
+
+    <button id="btnaddelement">
+        Add Element
+    </button>
+
+    <hr>
+
+    <script>
+        // Create Variable for the Button
+        let btnAddElement = window.document.querySelector('#btnaddelement');
+
+        //alert(btnAddElement);
+        btnAddElement.addEventListener('click', function()
+        {
+//             for(let i=0; i < 100000; i++)
+//             {
+// // Create Div element
+// let myDiv = window.document.createElement('div');
+
+// //Style the element
+// myDiv.style.width = '100px';
+// myDiv.style.height = '100px';
+// myDiv.style.borderRadius = "50%";
+// myDiv.style.display = "inline-block";
+
+// window.document.body.appendChild(myDiv);
+//             }
+
+            // Create Div element
+let myDiv = window.document.createElement('div');
+
+//Style the element
+myDiv.style.width = '100px';
+myDiv.style.height = '100px';
+myDiv.style.borderRadius = "50%";
+myDiv.style.display = "inline-block";
+
+window.document.body.appendChild(myDiv);
+            
+        
+        });
+
+        btnAddElement.click( + 100000000000000000000000000000000000000000000000000);
+        
+    </script>
+
+</body>
+</html>

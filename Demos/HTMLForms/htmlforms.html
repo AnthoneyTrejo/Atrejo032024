@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link id="themeLink" rel="stylesheet" href="pink.css">
+</head>
+<style>
+</style>
+<body>
+    <h1>
+        HTML Forms
+    </h1>
+
+    <div id="formcontainer">
+
+        <fieldset>
+            <legend>Text Input Element</legend>
+            <label for="textname">Enter your name:</label> 
+            <br>
+            <input type="text" id="textname" placeholder="John Doe">
+            <br>
+            <button id="svetxtbtn">Save Text to Local Storage</button>
+            <br>
+            <button id="ldtxtbtn">Load Text from Local Storage</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Radio Input Element</legend>
+            <input type="radio" id="radhtml" value="html" name="language"> <label for="radhtml">HTML</label>
+            <input type="radio" id="radcss" value="css" name="language"> <label for="radcss">CSS</label>
+            <input type="radio" id="radjavascript" value="javascript" name="language"> <label for="radjavascript">JavaScript</label>
+            <br>
+            <button id="sveradbtn">Save Radio to Local Storage</button>
+            <br>
+            <button id="ldradbtn">Load Radio from Local Storage</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Element</legend>
+            <select name="themeselector" id="themeselector" onchange="changeTheme()">
+                <option value="pink.css">Pink Theme</option>
+                <option value="hotpink.css">Hot Pink Theme</option>
+                <option value="purple.css">Purple Theme</option>
+            </select>
+            <br>
+            <button id="sveselbtn">Save Select to Local Storage</button>
+            <br>
+            <button id="ldselbtn">Load Select from Local Storage</button>
+        </fieldset>
+
+        <p name="pgoutput" id="pgoutput"></p>
+
+    </div>
+
+    <script>
+        let themeselector;
+        
+        // Select the select control (dropdown)
+        themeselector = document.getElementById('themeselector');
+
+        // Select the link to external stylesheet
+        let themeLink;
+
+        themeLink = document.getElementById('themeLink');
+        // alert(styleLink);
+
+
+        function changeTheme()
+        {
+            // alert(selstylesheet.value);
+            themeLink.href = themeselector.value;
+        }
+
+         // Get references to all buttons and input elements
+    const textInput = document.getElementById('textname');
+    const radioInputs = document.querySelectorAll('input[name="language"]');
+    const selectInput = document.getElementById('themeselector');
+    
+    // Get references to all save and load buttons
+    const saveTextBtn = document.getElementById('svetxtbtn');
+    const loadTextBtn = document.getElementById('ldtxtbtn');
+    const saveRadioBtn = document.getElementById('sveradbtn');
+    const loadRadioBtn = document.getElementById('ldradbtn');
+    const saveSelectBtn = document.getElementById('sveselbtn');
+    const loadSelectBtn = document.getElementById('ldselbtn');
+    
+    // Get reference to output paragraph
+    const outputParagraph = document.getElementById('pgoutput');
+
+    function changeTheme() {
+        // alert(selstylesheet.value);
+        themeLink.href = themeselector.value;
+    }
+
+    // Text input save and load functions
+    saveTextBtn.addEventListener('click', function() {
+        const textValue = textInput.value;
+        if (textValue) {
+            localStorage.setItem('savedText', textValue);
+            outputParagraph.textContent = 'Text saved to local storage: ' + textValue;
+        } else {
+            outputParagraph.textContent = 'Please enter text before saving';
+        }
+    });
+
+    loadTextBtn.addEventListener('click', function() {
+        const savedText = localStorage.getItem('savedText');
+        if (savedText) {
+            textInput.value = savedText;
+            outputParagraph.textContent = 'Text loaded from local storage: ' + savedText;
+        } else {
+            outputParagraph.textContent = 'No text found in local storage';
+        }
+    });
+
+    // Radio button save and load functions
+    saveRadioBtn.addEventListener('click', function() {
+        let selectedRadio = '';
+        for (const radio of radioInputs) {
+            if (radio.checked) {
+                selectedRadio = radio.value;
+                break;
+            }
+        }
+        
+        if (selectedRadio) {
+            localStorage.setItem('savedRadio', selectedRadio);
+            outputParagraph.textContent = 'Radio selection saved to local storage: ' + selectedRadio;
+        } else {
+            outputParagraph.textContent = 'Please select a radio button before saving';
+        }
+    });
+
+    loadRadioBtn.addEventListener('click', function() {
+        const savedRadio = localStorage.getItem('savedRadio');
+        if (savedRadio) {
+            for (const radio of radioInputs) {
+                if (radio.value === savedRadio) {
+                    radio.checked = true;
+                    break;
+                }
+            }
+            outputParagraph.textContent = 'Radio selection loaded from local storage: ' + savedRadio;
+        } else {
+            outputParagraph.textContent = 'No radio selection found in local storage';
+        }
+    });
+
+    // Select dropdown save and load functions
+    saveSelectBtn.addEventListener('click', function() {
+        const selectedTheme = selectInput.value;
+        localStorage.setItem('savedTheme', selectedTheme);
+        outputParagraph.textContent = 'Theme selection saved to local storage: ' + selectedTheme;
+    });
+
+    loadSelectBtn.addEventListener('click', function() {
+        const savedTheme = localStorage.getItem('savedTheme');
+        if (savedTheme) {
+            selectInput.value = savedTheme;
+            changeTheme(); // Apply the theme
+            outputParagraph.textContent = 'Theme loaded from local storage: ' + savedTheme;
+        } else {
+            outputParagraph.textContent = 'No theme selection found in local storage';
+        }
+    });
+
+
+        
+
+
+
+    </script>
+</body>
+</html> 

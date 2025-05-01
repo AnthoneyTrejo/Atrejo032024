@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Grid Chagoyan's Ex. </title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout</title>
+<style>
+/* Mobile First Design */
+body
+{
+background-color: tomato;
+padding-top:1rem;
+}
+#container
+{
+max-width:1200px;
+background-color: cadetblue;
+margin:auto;
+border:1px solid black;
+}
+nav
+{
+background-color: lavender;
+min-height:5rem;
+padding:1rem;
+grid-area: nv;
+}
+header{
+background-color: salmon;
+min-height:5rem;
+padding:1rem;
+grid-area: hr;
+
+}
+#media
+{
+background-color: gold;
+min-height:5rem;
+padding:1rem;
+grid-area: md;
+}
+main
+{
+background-color: white;
+min-height:5rem;
+padding:1rem;
+grid-area: mn;
+}
+aside
+{
+background-color: lemonchiffon;
+min-height:5rem;
+padding:1rem;
+grid-area: ad;
+}
+footer
+{
+background-color: salmon;
+min-height:5rem;
+padding:1rem;
+grid-area: fr;
+}
+#subfooter
+{
+background-color: sandybrown;
+min-height:5rem;
+padding:1rem;
+grid-area: sr;
+}
+/* Tablet and Desktop */
+/* Media Queries */
+@media screen and (min-width:480px)
+{
+body{background-color: brown;}
+#container
+{
+    display:grid;
+    grid-template-areas:
+    "hr hr hr hr"
+    "nv nv nv nv"
+    "md md md ad"
+    "mn mn mn ad"
+    "fr fr fr fr"
+    "sr sr sr sr"
+    ;
+}
+#media
+{
+    min-height: 10rem;
+    transition: all 2s;
+}
+main
+{
+    transition: all 2s;
+    min-height: 10rem;
+
+}
+}
+@media screen and (min-width:768px)
+{
+body{background-color: crimson;}
+#container
+{
+    display:grid;
+    grid-template-areas:
+    "hr hr hr hr"
+    "nv nv nv nv"
+    "md md md md"
+    "mn mn mn ad"
+    "fr fr fr fr"
+    "sr sr sr sr"
+    ;
+}
+}
+@media screen and (min-width:1200px)
+{
+body{background-color: darkred;}
+}
+</style>
+</head>
+<body>
+<div id="container">
+<nav>Nav</nav>
+<header>Header</header>
+<div id="media"></div>
+<main>Main</main>
+<aside>Aside</aside>
+<footer>Footer</footer>
+<footer id="subfooter"></footer>
+</div>
+</body>
+</html>
+</body>
+</html>

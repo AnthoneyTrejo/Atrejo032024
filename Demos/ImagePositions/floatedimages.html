@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floated Images</title>
+</head>
+<style>
+    body
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: seagreen;
+    }
+    
+    h1, h2, h3
+    {
+font-family: 'Times New Roman', Times, serif;
+    }
+    #wrapper
+    {
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    main
+    {
+        line-height: 1.7;
+        color:#333;
+        border:1px solid silver;
+        background-color: white;
+    }
+    img.centerimage
+    {
+        max-width:60%;
+        display: block;
+        margin: auto;
+    }
+    figure.rightimage
+    {
+        max-width:60%;
+        height: auto;
+        float: right;
+        margin: 1rem;
+        
+    }
+    figure.leftimage
+    {
+        max-width:60%;
+        height: auto;
+        float: left;
+        margin: 1rem;
+        
+    }
+    main img
+    {
+        max-width: 100%;
+        box-shadow: 2px 2px 2px black;
+        max-height: 100%;
+    }
+    figure
+    {
+        background-color: none;
+
+    }
+    figcaption
+    {
+        text-align: center;
+    }
+
+    /* clear the floated images */
+    .clearfix::after
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <main class="clearfix">
+            <h1>Floated Images</h1>
+
+            <figure><img class="centerimage" src="Images/mainkeyboard.png" alt="A Computer Keyboard Logitech A5000">
+            <figcaption>
+                Logitech A5000 Keyboard
+            </figcaption>
+            </figure>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis, debitis dolorum repudiandae ea pariatur quod porro tenetur similique nisi aliquam. Reprehenderit eius at modi itaque, rem natus laboriosam fugit, tempore id esse explicabo omnis voluptates ut commodi. Non quibusdam sed ut totam? Libero, molestias, reprehenderit consectetur odio suscipit iusto consequatur distinctio eligendi perspiciatis consequuntur animi culpa nam nemo dolor.
+            </p>
+            <figure class="rightimage"><img  src="Images/Untitled-1.png" alt="screeen with code">
+            <figcaption>Code on Linux</figcaption>
+            </figure>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis, debitis dolorum repudiandae ea pariatur quod porro tenetur similique nisi aliquam. Reprehenderit eius at modi itaque, rem natus laboriosam fugit, tempore id esse explicabo omnis voluptates ut commodi. Non quibusdam sed ut totam? Libero, molestias, reprehenderit consectetur odio suscipit iusto consequatur distinctio eligendi perspiciatis consequuntur animi culpa nam nemo dolor.
+            </p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis, debitis dolorum repudiandae ea pariatur quod porro tenetur similique nisi aliquam. Reprehenderit eius at modi itaque, rem natus laboriosam fugit, tempore id esse explicabo omnis voluptates ut commodi. Non quibusdam sed ut totam? Libero, molestias, reprehenderit consectetur odio suscipit iusto consequatur distinctio eligendi perspiciatis consequuntur animi culpa nam nemo dolor.
+            </p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis, debitis dolorum repudiandae ea pariatur quod porro tenetur similique nisi aliquam. Reprehenderit eius at modi itaque, rem natus laboriosam fugit, tempore id esse explicabo omnis voluptates ut commodi. Non quibusdam sed ut totam? Libero, molestias, reprehenderit consectetur odio suscipit iusto consequatur distinctio eligendi perspiciatis consequuntur animi culpa nam nemo dolor.
+            </p>
+
+            <figure class="leftimage"><img  src="Images/comp.png" alt="screeen with code">
+            <figcaption>Code on Windows</figcaption>
+            </figure>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis, debitis dolorum repudiandae ea pariatur quod porro tenetur similique nisi aliquam. Reprehenderit eius at modi itaque, rem natus laboriosam fugit, tempore id esse explicabo omnis voluptates ut commodi. Non quibusdam sed ut totam? Libero, molestias, reprehenderit consectetur odio suscipit iusto consequatur distinctio eligendi perspiciatis consequuntur animi culpa nam nemo dolor.
+            </p>
+        </main>
+    </div>
+</body>
+</html>

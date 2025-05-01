@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Frames From To</title>
+</head>
+<style>
+    div
+    {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin-top:20px;
+    }
+    #one
+    {
+        background-color: crimson;
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: sideupdown;
+        animation-direction:alternate;
+    }
+    #two
+    {
+        background-color: teal;
+        animation-duration:3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: sideswoop;
+        animation-direction:alternate;
+    }
+    #three
+    {
+        background-color: navy;
+        animation-name:movespin;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes movespin
+    {
+        from{transform:rotate(0deg);}
+        to{transform:rotate(360deg);}
+    }
+    @keyframes sideswoop
+    {
+        0%{transform: translate(0px, 0px);}
+        100%{transform:translate(500px, 0px)}
+    }
+    @keyframes sideupdown
+    {
+        0%{}
+        25%{transform:translate(700px, 500px)rotate(5deg)}
+        50%{transform:translate(800px,-200px)rotate(90deg)}
+        75%{transform:translate(900px,200px)rotate(180deg)}
+        100%{transform:translate(1000px,-100px)rotate(360deg)}
+    }
+</style>
+<body>
+    <h1>Key Frames From To</h1>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+</body>
+</html>

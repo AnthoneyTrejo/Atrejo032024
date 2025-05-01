@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2AGRPHX</title>
+</head>
+<style>
+    body{background-image: url(Images/forest.jpg);
+        background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;}
+    #toothless
+    {
+        background-image: url(Images/toothless.gif);
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-name: leftright;
+        animation-direction:alternate;
+        height: 500px;
+        width: 500px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center ;
+        top:200px;
+        position: relative;
+    }
+    audio
+    {
+        display: transparent;
+    }
+    @keyframes leftright
+    {
+        from{transform: translate(0px);}
+        to{transform:translate(500px);}
+    }
+</style>
+<body>
+<h1>A029J3A2AGRPHX</h1>
+<div id="toothless"></div>   
+<audio src="https://res.cloudinary.com/dyfad4b3c/video/upload/v1731696277/toothless1_xls4he.mp3" controls="controls" loop="loop"></audio>
+</body>
+</html>

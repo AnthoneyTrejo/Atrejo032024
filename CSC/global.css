@@ -1,0 +1,271 @@
+
+    #container
+    {
+            padding: 1rem;
+            background-color: purple;
+            max-width: 1200px;
+            width: 80%;
+            margin: auto;
+    }
+    #wrapper
+    {
+            width: 80%;
+            margin: auto;
+            gap: 10px; 
+    }
+    #logo
+        {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            padding:1.5rem;
+            box-sizing:border-box;
+            position:relative;
+            top:-6px;
+                left:calc(50% - 75px);
+            background-image: url(Images/logo2.png);
+            background-position: center center;
+            border-radius:1.5rem;
+        }
+    #pageheader
+    {
+        min-height: 5rem;
+        background-color: orange;
+
+        grid-area: ph;
+
+    }
+    #mainnav
+    {
+        min-height: 7rem;
+        background-color: seagreen;
+
+        grid-area: mn;
+
+    }
+    #intromedia
+    {
+        min-height: 5rem;
+        background-color: lime;
+
+        grid-area: im;
+  
+    }
+    #pagemain
+    {
+        min-height: 5rem;
+        background-color: white;
+        grid-area: pm;
+
+    }
+    #card001{min-height: 5rem;
+        background-color: white;
+        grid-area: c1;
+        
+    }
+    #card002
+    {
+        min-height: 5rem;
+        background-color: lightblue;
+        
+        grid-area: c2;
+        
+    }
+    #card003
+    {min-height: 5rem;
+        background-color: rgb(80, 176, 255);
+        
+        grid-area: c3;
+        
+    }
+    #card004
+    {
+        min-height: 5rem;
+        background-color: rgb(230, 173, 201);
+        
+        grid-area: c4;
+        
+    }
+    #card005
+    {
+        min-height: 5rem;
+        background-color: rgb(230, 185, 173);
+        
+        grid-area: c5;
+        
+    }
+    #card006
+    {
+        min-height: 5rem;
+        background-color: lightblue;
+        
+        grid-area: c6;
+        
+    }
+    #card007
+    {min-height: 5rem;
+        background-color: rgb(80, 176, 255);
+        
+        grid-area: c7;
+        
+    }
+    #card008
+    {
+        min-height: 5rem;
+        background-color: rgb(230, 173, 201);
+        
+        grid-area: c8;
+        
+    }
+    #card009
+    {
+        min-height: 5rem;
+        background-color: rgb(230, 185, 173);
+        
+        grid-area: c9;
+        
+    }
+    #pagefooter
+    {
+        min-height: 5rem;
+        background-color: gold;
+        
+        grid-area: pf;
+        
+    }
+    #pagedetails
+    {
+        min-height: 5rem;
+        background-color: silver;
+        
+        grid-area: pd;
+        
+    }
+
+    
+    @media screen and (min-width: 768px)
+    {
+        #wrapper
+        {
+            display: grid;
+            grid-template-areas:
+            "ph ph ph"
+            "im im im"
+            "mn pm pm"
+            "mn pm pm"
+            "mn pm pm"
+            "c1 c2 c3"
+            "c4 c5 c6"
+            "c7 c8 c9"
+            "pf pf pf"
+            "pd pd pd"
+            "pd pd pd";
+        }
+        #pageheader
+        {
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #mainnav
+        {
+            
+                
+                border: 1px solid black;
+                text-align: center;
+                min-height: 20rem;
+        }
+        #intromedia
+        {
+            
+                
+                border: 1px solid black;
+                text-align: center;
+                min-height: 14rem;
+        }
+        #pagemain
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 15rem;
+        }
+        #card001{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card002
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #card003{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card004
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #card005
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #card006
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #card007{
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+            }
+        #card008
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #card009
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        
+        #pagefooter
+        {
+            
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 10rem;
+        }
+        #pagedetails
+        {
+            
+                border: 1px solid black;
+                text-align: center;
+                min-height: 5rem;
+        }
+        }   

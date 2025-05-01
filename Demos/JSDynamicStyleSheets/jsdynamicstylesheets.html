@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dynamic Style Sheets</title>
+    <link id="stylelink" rel="stylesheet" href="seagreentheme.css">
+    <!-- <link rel="stylesheet" href="purpletheme.css">
+    <link rel="stylesheet" href="pinktheme.css"> -->
+
+    <style>
+        #selstylesheet {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Dynamic Stylesheets</h1>
+
+    <select name="selstylesheet" id="selstylesheet" onchange="changeTheme()">
+        <option value="seagreentheme.css">Seagreen</option>
+        <option value="purpletheme.css">Purple</option>
+        <option value="pinktheme.css">Pink</option>
+    </select>
+
+    <script>
+        let selstylesheet;
+        
+        // Select the select control (dropdown)
+        selstylesheet = document.getElementById('selstylesheet');
+
+        // Select the link to external stylesheet
+        let styleLink;
+
+        styleLink = document.getElementById('stylelink');
+        // alert(styleLink);
+
+
+        function changeTheme()
+        {
+            // alert(selstylesheet.value);
+            styleLink.href = selstylesheet.value;
+        }
+
+
+    </script>
+
+</body>
+</html>

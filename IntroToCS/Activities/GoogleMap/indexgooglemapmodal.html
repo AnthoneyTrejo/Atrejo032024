@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map Modal Menu</title>
+</head>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1, p
+    {
+        padding: 1rem;
+    }
+
+    header#pageheader
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid silver;
+    }
+
+    nav#pagenav
+    {
+        background-color: lightblue;
+        padding: 1rem;
+        text-align: center;
+        display: none;
+    }
+
+    nav#pagenav>ul
+    {
+        display: flex;
+        justify-content: space-around;
+        list-style-type:none;
+        width: 50%;
+        margin: auto;
+        
+    }
+
+    img#hamburgermenu
+    {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+    <!-- Begin Modal -->
+    <div id="modalmenu">
+        <header id="modalheader">
+            <h1>Hamburger Menu Links</h1>
+            <img src="Images/closex.png" alt="Close X" id="closex">
+        </header>
+        <nav>
+            
+        </nav>
+        <nav id="modalnav">
+            <a href="https://chagoyan.com">Chagoyan</a>
+            <br>
+            <a href="https://yahoo.com">Yahoo</a>
+            <br>
+            <a href="https://google.com">Google</a>
+        </nav>
+    </div>
+    <!-- End Modal Menu -->
+
+    <header id="pageheader">
+        <h1>Google Map Modal</h1>
+        <img src="Images/hamburgermenu.png" alt="hamburgermenu icon" id = hamburgermenu>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eaque tempora amet dignissimos nihil nam quidem, odio animi, molestias libero suscipit illo cumque labore similique id! Optio repudiandae fugiat voluptatem!</p>
+
+
+</body>
+</html>

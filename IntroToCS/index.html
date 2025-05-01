@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthoney Trejo - Portfolio</title>
+    <style>
+        html
+        {
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            font-family: cursive;
+            line-height:1.7;
+            background-image: url(Images/download.jpeg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+        }
+
+        #container
+        {
+            background-color: rgb(74, 74, 74);
+            width: 90%;
+            margin: 0 auto;
+            padding:2rem;
+            border-radius:1.5rem;
+            min-height:500px;
+        }
+
+        #pagenav>a
+        {
+            color:darkgrey;
+        }
+
+        #wrapper
+        {
+            border:1px solid gold;
+            border-radius:1.5rem;
+            margin:0 auto;
+            width:90%;
+        }
+
+        #pageheader
+        {
+            background-image: url(Images/20371128.jpg);
+            min-height:500px;
+            padding: 1rem ;
+            border-radius: 1.5rem 1.5rem 0rem 0rem;
+            background-attachment:fixed;
+            background-size: cover;
+            background-position: center ;
+        }
+
+        #logo
+        {
+            width: 150px;
+            min-height: 150px;
+            border-radius: 100%;
+            padding:1.5rem;
+            box-sizing:border-box;
+            position:relative;
+            left:-50px;
+            top:-50px;
+            background-image: url(Images/logo.png);
+            background-position: center center;
+        }
+
+        blockquote
+        {
+        text-align:center;
+        font-size: 24px;
+        color:white;
+        font-weight: bold;
+        text-shadow:2px 2px 2px black;
+        position:relative;
+        top:-130px;
+        font-size: 40px;
+        }
+
+        #quote
+        {
+        text-align:center;
+        width:90%;
+        margin:0 auto;
+        color:white;
+        text-shadow:1px 1px 1px black;
+        position:relative;
+        top:-130px;
+        font-size: 30px;
+        }
+
+        #pagenav
+        {
+            background-color: rgb(54, 54, 54);
+            padding:1rem;
+            color:white;
+            border-top:3px solid rgb(0, 0, 0);
+            border-bottom:3px solid rgb(0, 0, 0);
+        background-image: url(Images/wp9792885.jpg);
+        background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            min-height:500px;
+        }
+
+        #media
+        {
+    
+            
+
+            
+            background-color: rgb(44, 44, 44);
+            padding:1rem;
+            color:white;
+            background-image: url(Images/desktop-wallpaper-cod-zombies-the-giant-animated-cod-zombies.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+        }
+            
+        
+
+        iframe
+        {
+            
+            
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+            padding:1rem;
+            opacity:0.8;
+            display:block;
+            margin: 0 auto;
+            aspect-ratio: 16 /9 ;
+            width:90%;
+        }
+
+        img
+        {
+            box-shadow: 10px 10px 10px black;
+border-radius: 50px;
+display:block;
+margin:auto;
+max-block-size: 500px;
+aspect-ratio: 16 /9 ;
+            width:90%;
+
+            min-height:500px;
+            
+        }
+
+        #pagemain
+        {
+            color:white;
+            
+            background-color: rgb(34, 34, 34);
+            padding:1rem;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            background-image: url(Images/desktop-wallpaper-can-anyone-give-me-of-der-eisendrache-or-the-forest.jpg);
+            aspect-ratio: 16 /9 ;
+            width:90%;
+        }
+        #heroimage
+        {
+            width:90%;
+            display:block;
+            margin:0 auto;
+            border-radius:1rem; 
+        }
+
+        #career
+        {
+            background-color: rgb(34, 34, 34);
+            min-height:500px;
+
+            color:white;
+            padding:1rem;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            background-image: url(Images/call-of-duty-zombies-zetsubou-no-shima-wallpaper-preview.jpg);
+        }
+
+        .semester
+        {
+            background-color: rgb(24, 24, 24);
+            min-height:500px;
+            
+            padding:1rem;
+            color:rgb(255, 255, 255);
+            border:1px solid rgb(7, 6, 6);
+        }
+
+        #semester1
+        {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            background-image: url(Images/a0339080ef6dfb68f404deff2c9bbf79.jpg);
+        }
+
+        #semester2
+        {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            background-image: url(Images/desktop-wallpaper-47-black-ops-3-revelations-black-ops-3-zombies.jpg);
+        height:550px;
+        }
+        h2
+        {
+            color:white;
+        }
+        ul{color:white;}
+        #pagefooter
+        {
+            background-color: rgb(14, 14, 14);
+            color:rgb(255, 255, 255);
+            text-align:center;
+            padding:1rem;
+            
+            min-height:500px;
+            
+            background-image: url(Images/jxxb0qahxyvy.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center ;
+            position:relative;
+        }
+
+        #rgmk2
+        {
+            background-image: url(Images/rgmk2.png);
+            width: 10%;
+            position:absolute;
+            top:0px;
+            right:0px;
+            rotate:320deg;
+            aspect-ratio: 1 / 1;
+            background-image: no-repeat;
+            background-size: cover;
+            
+        }
+        
+
+        #subfooter
+        {
+            background-color:rgb(4, 4, 4);
+            color:black;
+            text-align:center;
+            padding:1rem;
+            border-radius:0 0 1.5rem 1.5rem;
+            min-height: 500px;
+            background-image: url(Images/ea967fdac929275e9527d4db280eb0d9.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position:center ;
+
+        }
+        a{
+    color: white;
+}
+
+a:hover{
+    color:rgb(74,74,74);
+    text-shadow:5px 5px 5px rgb(127, 29, 29);
+    transition:all .5s;
+}
+
+#flexbox001
+{
+    display:flex;
+    flex-direction: column;
+}
+#semester1, #semester2
+{
+    flex:1;
+}
+
+@media screen and (min-width:700px) 
+{
+    #flexbox001
+    {
+        flex-direction: row;
+    }
+}
+    </style>
+</head>
+<body>
+
+
+<div id="container"> 
+
+
+<div id="wrapper">
+
+
+<header id="pageheader">
+
+    <div id="logo">
+        
+    </div>
+
+<blockquote>
+    “This is our last stand, boys! Let's make it count!”
+</blockquote>
+
+
+<p id="quote">
+    - Tank Dempsey
+</p>
+
+
+</header>
+<!-- end pageheader -->
+
+
+<nav id="pagenav">
+    <a href="#career">Career</a> | <a href="#semester1">Semester 1</a> | <a href="#semester2">Semester 2</a> 
+</nav>
+
+
+    <!-- end of pagenav -->
+    <div id="media">
+        <iframe  src="https://www.youtube-nocookie.com/embed/v-DMpwiJL1E?si=hhajOBq_9QwpaE5J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!-- end of media -->
+
+
+    <main id="pagemain">
+        <img id="heroimage" src="Images/i-have-a-question-what-is-the-bow-and-staff-of-each-v0-lqvmtrnugmwa1.webp" alt="Der Eisendrache Bows"> 
+        <h1>Trejo, Anthoney Jose</h1>
+        <h2>Portfolio</h2>
+    <p>Hello ladies and gentlemen, welcome to my portfolio. I am a well professional hacker one of my examples of people I have hacked is down bellow. BUT somethings about me is I am hyperactive, energetic, and very athletic.</p>
+    <a href="https://chsserver01.org/2023/cstewart042023/">The Battle of The Buttons (AKA Get Hacked Chase) </a>
+    </main>
+    <!-- end of page main -->
+
+
+    <section id="career">
+        <h2>Career</h2>
+        <a name="career"></a>
+        <ul>
+            <li><a href="Career/Anthoney Jose Trejo - Career Action Plan Worksheet.pdf">Career Action Plan</a></li>
+            <li><a href="Career/PrintStudentTranscriptsLaser_20240514_110857_6844155.pdf">23-24 Transcript</a></li>
+        </ul>
+    </section>
+
+
+    <div id="flexbox001">
+        <section id="semester1" class="semester">
+            <h2>Semester 1</h2>
+            <a name:="semester1"></a>
+            <ul>
+                <li>
+                    <a href="Semester1/Q1/A001JS/a001js.html">A001JS</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q1/A002JS/a002js.html">A002JS</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q1/A003JS/a003js.html">A003JS</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q1/A004JS/a004js.html">A004JS</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q2/A005JS/a005js.html">A005JS</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q2/A006JS/A006JS.html">A006JS</a>
+                </li>
+                <li>
+                    <a href="Activities/ResponsiveWebDesign2/responsivewebdesign2.html">On Your Own 1 - Add Media Queries</a>
+                </li>
+                <li>
+                    <a href="Semester1/Q2/A029J3A/a029j3a.html">A029J3A</a>
+                </li>
+                <li>
+                    <a href="Demos/MickeyMouse/mickeymouse.html">Mickey Mouse</a>
+                </li>
+                
+            </ul>
+        </section>
+    
+    
+        <section id="semester2" class="semester2">
+            <h2>Semester 2</h2>
+            <a name:="semester2"></a>
+            <ul>
+                <li> <a href="Activities/Popsicle/popsicle.html">Popsicle</a>    |   <a href="Semester1/Q2/A029J3A/a029j3a.html">A029J3A</a> |   <a href="Demos/ForLoopMultiplicationTable/multiplicationtableforloop.html">For Loop Multiplication Table</a></li>
+                <li><a href="Demos/Adv For Loop X Table/advforloopxtable.html">Advanced For Loop Multiplication</a>     |    <a href="Semester2/Q3/A029G8/a029g8.html">A029G8</a>    |   <a href="Semester2/Q3/A029J3A2/a029j3a2.html">A029J3A2</a></li>
+                <li> <a href="Semester2/Q3/A029J3A2GRFX/a029j3a2grfx.html">A029J3A2GRFX</a>  |   <a href="Semester2/Q3/A029J3A2A/a029j3a2a.html">A029J3A2A</a>  |   <a href="Semester2/Q3/A029J3A2AGRPHX/a029j3a2agrphx.html">A029J3A2AGRPHX</a></li>
+                <li><a href="Semester2/Q3/A029J3A2AHJ/a029j3a2ahj.html">A029J3A2AHJ</a>     |    <a href="Semester2/Q3/A029JA2AH/a029ja2ah.html">A029J3A2AH</a>    |   <a href="Demos/CSSGridAreas001/cssgridareas001.html">CSS Grid Areas 001</a></li>
+                <li><a href="Semester2/Q3/RandomNumbersGenerator/randomnumbersgenerator.html">Random Numbers Generator</a>  |   <a href="Semester2/Q3/RandomBugGen/randombuggen.html">Random Bug Generator</a>  |   <a href="Semester2/Q3/GridAreasOYO1/oyo1gridareas.html">Grid Areas On Your Own 1</a></li>
+                <li><a href="Semester2/Q3/GridAreasOYO2/oyo2gridareas.html">Grid Areas On Your Own 2</a>    |   <a href="Semester2/Q3/LayoutFlex/layoutflex.html">Layout Flex</a>   |   <a href="Semester2/Q3/LayoutGrid/layoutgrid.html">Layout Grid</a></li>
+                <li><a href="Semester2/Q3/GAMQ/gamq.html">Grid Area Media Queries</a> | <a href="Demos/Random Colors/randomcolors.html">Random Colors</a> | <a href="Demos/Magic8Ball/magic8ball.html">Magic 8 Ball</a></li> 
+                <li><a href="Projects/CSCNYCProject/index.html">New York City Project</a> | <a href="Demos/Hamburger Menu/hamburgermenu.html">Hamburger Menu</a> | <a href="Demos/Hamburger Menu/indexgooglemapmodal.html">Google Map Modal</a>
+            </ul>
+        </section>
+    </div>
+    <!-- end of sections -->
+
+
+    <footer id="pagefooter">
+        
+
+        <a href="https//chsserver01.org">chagoyan</a> |
+        <a href="http://chsserver01.org/chaggy.net/colortheory/colorscheme2/index-en.html?authuser=0">color scheme</a> |
+        <a href="https://coalingahuron.aeries.net">aeries</a> |
+        <a href="https://chs.chusd.org/">chs</a> |
+        <a href="https//:go.weareimago.com/">imago</a> |
+        <a href="https//:app.listenwise.com/sign_in">listenwise</a> |
+        <a href="https//:www.google.com">google</a> |
+        <a href="https//classroom.google.com">classroom</a> |
+        <a href="https//minga.io">minga</a> | 
+        <div id="rgmk2"></div>
+    </footer>
+
+
+    <footer id="subfooter">
+        <div id="subsubfooter">
+            <p>&copy; Anthoney Trejo 2023-2024
+                <script>
+                    window.document.write(new Date().getFullYear());
+                </script>
+            </p>
+        </div>
+    </footer>
+    <!-- end of footers -->
+
+
+        </div>
+    <!-- end wrapper -->
+    </div>
+    <!-- end container -->
+
+</body>
+</html>

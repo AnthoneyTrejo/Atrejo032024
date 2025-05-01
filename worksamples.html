@@ -1,0 +1,130 @@
+∫<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthoney Jose Trejo - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #ai
+        {
+            margin: auto;
+            position: relative;
+            left: calc(50% - 270px);
+        }
+        #jomlogo
+        {
+            margin: auto;
+            position: relative;
+            left: calc(50% - 190px);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- add anchor and name it to reach top -->
+    <a name="topanchor"></a>
+
+    <!-- begin top nav -->
+
+    <nav id="topnav">
+    
+            
+    
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="certificate.html">Certificates</a> 
+            <a href="worksamples.html"> Work Samples</a> 
+        </div>
+
+    </nav>
+<!-- end top nav -->
+<a href="https://jocular-gumdrop-bf9979.netlify.app"><div id="logo"></div></a>
+    <!-- begin page header -->
+
+    
+    <section id="career">
+
+
+
+    <div id="keyassignments">
+
+        
+
+    <div class="container">
+        <h1>Key Assignments</h1>
+        <p id="cs"> Welcome to my webpage! My name is Anthoney Jose Trejo, I am a highschool student at Coalinga High School who is taking dual enrollment classes with West Hills College. I am also apart of the Cross Country and Track & Field team at CHS. My dreams are to go to Santa Barbara and become a biology teacher here in CHS. This portfolio here is my 3rd and final one for this pathway. This year I am in Web App Development</p>
+
+        <h2>Salvador, Brazil Questions</h2>
+        <iframe src="WorkSamples/Anthoney Jose Trejo - Salvador, Brazil .pdf" frameborder="0"></iframe>
+        
+        <h2>AI Generated background</h2>
+        
+        <div id="ai"><img src="WorkSamples/Firefly a beautiful green forest that leads to a sunset 77433.jpg" frameborder="0"></img></div>
+        
+        <h2>Spanish 2 Timeline</h2>
+        <iframe src="WorkSamples/Timerline.pdf" frameborder="0"></iframe>
+        
+        <h2>Narrative Essay</h2>
+        <iframe src="WorkSamples/The Journey of Reuben Eli Mason(Final).pdf" frameborder="0"></iframe>
+        
+        <h2>Journey To Mars Logo</h2>
+        <div id="jomlogo"><img src="WorkSamples/Logo.png" frameborder="0"></img></div>
+    </div>
+
+</div>
+<!-- end keyassignments -->
+
+</div>
+
+    <div id="subfooter">
+        <div class="container">
+            <div class="quote"></div>
+            <a href="https://www.ucsb.edu/">UCSB</a> |
+            <a href="https://www.athletic.net/">Athletic</a> |
+            <a href="https://www.instagram.com/hornedtoads_xc/?hl=en">Horned Toads XC Page</a> |
+            <a href="https://www.instagram.com/chshornedtoads_trackandfield/?hl=en">Horned Toads T&F Page</a> |
+            <a href="https://westhillscollege.com/coalinga/">West Hills</a> |
+            <a href="IntroToCS/index copy.html">Intro to Java</a> |
+            <a href="WebPageDesign/Trejo, Anthoney/citytheme.html">Web Page Design Portfolio</a> |
+        </div>
+    </div>
+   
+            
+
+                
+            
+
+    <!-- end sub footer -->
+
+    <!-- Begin Top -->
+    <div id="top"><a href="#topanchor">Top</a></div>
+    <!-- end top -->
+    <button id="ASong" onClick="playPause()">
+        <audio src="https://res.cloudinary.com/dyfad4b3c/video/upload/v1731695336/%E9%82%A6%E6%A5%BD%E4%BD%9C%E6%A5%AD%E7%99%92%E3%81%97%E9%9B%86%E4%B8%AD%E7%9D%A1%E7%9C%A0%E4%B8%89%E5%91%B3%E7%B7%9A%E5%B0%BA%E5%85%AB%E7%90%B4%E5%A4%9C_%E5%A5%8FTraditional_Japanese_Music_-_Shamisen_Shakuhachi_Koto_imlitr.mp3" loop>
+
+        </audio>
+        </button>
+    
+    <script>
+        var aud = document.getElementById("ASong").children[0];
+        var isPlaying = false;
+        aud.pause();
+
+        function playPause() {
+        if (isPlaying) {
+            aud.pause();
+        } else {
+            aud.play();
+        }
+        isPlaying = !isPlaying;
+        }
+
+        window.addEventListener('resize', refresh);
+
+        function refresh()
+        {
+            window.location.reload(true);
+        }
+    </script>
+    </body>

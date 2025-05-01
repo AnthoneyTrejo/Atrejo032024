@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Arc</title>
+</head>
+<body>
+    <h1>Canvas Arc</h1>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Create canvas for 2d drawing
+        const canvas = window.document.querySelector("#canvas")
+        const ctx = canvas.getContext('2d');
+        
+        //Configurwe Canvas
+        canvas.width= 800;
+        canvas.height = 400;
+        
+        //Styles
+        canvas.style.border = "2px solid seagreen";
+        canvas.style.margin = 'auto';
+        canvas.style.display = 'block'
+
+        // Draw Circle
+        ctx.strokeStyle = "Seagreen";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 0, 6.28);
+        ctx.stroke();
+
+        //CLockwise Radoam
+        ctx.strokeStyle = 'teal';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 0, 1, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'yellow';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 1, 2, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'crimson';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 2, 3, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'lightblue';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 3, 4, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'pink';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 4, 5, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'purple';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 5, 6, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'lightgreen';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 6, 6.28, false);
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+</body>
+</html>
