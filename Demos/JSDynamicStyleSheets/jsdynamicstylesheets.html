@@ -19,31 +19,55 @@
 <body>
     <h1>JS Dynamic Stylesheets</h1>
 
-    <select name="selstylesheet" id="selstylesheet" onchange="changeTheme()">
+    <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
         <option value="seagreentheme.css">Seagreen</option>
         <option value="purpletheme.css">Purple</option>
         <option value="pinktheme.css">Pink</option>
     </select>
 
     <script>
-        let selstylesheet;
+        let selStylesheet;
         
         // Select the select control (dropdown)
-        selstylesheet = document.getElementById('selstylesheet');
-
+        selStylesheet = document.getElementById('selstylesheet');
+        // alert(selStylesheet);
         // Select the link to external stylesheet
         let styleLink;
 
         styleLink = document.getElementById('stylelink');
         // alert(styleLink);
 
+        
 
-        function changeTheme()
+
+        function updateStylesheet()
         {
-            // alert(selstylesheet.value);
-            styleLink.href = selstylesheet.value;
+           
+
+            localStorage.setItem('selectedStylesheet3497', selStylesheet.value);
+
+            // alert(selStylesheet.value); 
+            
+            // alert(styleLink); 
+            
+            styleLink.href = selStylesheet.value;
         }
 
+        window.addEventListener('load', function()
+        {
+            let savedStylesheet = localStorage.getItem('selectedStylesheet3497');
+alert(savedStylesheet)
+
+
+
+            if(savedStylesheet !== null)
+            {
+                // styleLink.href = savedStyleSheet;
+                // 
+                styleLink.href = savedStylesheet;
+                selStylesheet.value = savedStylesheet;
+            }
+        });
 
     </script>
 
