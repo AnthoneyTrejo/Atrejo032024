@@ -223,11 +223,22 @@
         isPlaying = !isPlaying;
         }
 
+        let selStylesheet;
+        
+        // Select the select control (dropdown)
+        selStylesheet = document.getElementById('selstylesheet');
+        // alert(selStylesheet);
+        // Select the link to external stylesheet
+        let styleLink;
+
+        styleLink = document.getElementById('stylelink');
+        // alert(styleLink);
+
         function updateStylesheet()
         {
-        
+           
 
-            localStorage.setItem('selectedStylesheet2008', selStylesheet.value);
+            localStorage.setItem('selectedStylesheet14643', selStylesheet.value);
 
             // alert(selStylesheet.value); 
             
@@ -238,7 +249,7 @@
 
         window.addEventListener('load', function()
         {
-            let savedStylesheet = localStorage.getItem('selectedStylesheet2008');
+            let savedStylesheet = localStorage.getItem('selectedStylesheet14643');
 
 
 
